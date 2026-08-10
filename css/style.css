@@ -1,0 +1,37 @@
+:root {
+  --ink: #1b1c1f;
+  --paper: #f8f7f2;
+  --line: rgba(27, 28, 31, 0.14);
+  --accent: #A0ED32;
+  --accent-hover: #8ed42b;
+  --sans: "Manrope", Arial, sans-serif;
+  --display: "Space Grotesk", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+body.dark-mode {
+  --ink: #f8f7f2;
+  --paper: #111214;
+  --line: rgba(248, 247, 242, 0.18);
+  --accent: #d9ee46;
+  --accent-hover: #efff64;
+}
+
+.site-container {
+  width: min(100% - 48px, 1440px);
+  margin: 0 auto;
+}
+
+a { color: inherit; }
