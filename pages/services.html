@@ -15,6 +15,7 @@
   <!-- Bootstrap 5 CSS & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/pages.css">
   <link rel="stylesheet" href="../css/responsive.css">
 </head>
@@ -41,11 +42,19 @@
             <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="all-categories.html">All Categories</a></li>
             <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
             <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
           </ul>
-          <a class="quote-button" href="quotation.html">Get a Free Quotation <i class="bi bi-arrow-up-right"></i></a>
+          <div class="d-flex align-items-center gap-2">
+            <a class="quote-button" href="quotation.html">Get a Free Quotation <i class="bi bi-arrow-up-right"></i></a>
+            <button type="button" class="nav-cart-btn" data-bs-toggle="offcanvas" data-bs-target="#smcgCartOffcanvas" aria-label="View Cart">
+              <i class="bi bi-bag-check-fill"></i>
+              <span>Cart</span>
+              <span class="nav-cart-badge" id="navCartBadge">0</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -71,24 +80,544 @@
   </header>
 
   <main>
-    <section class="page-banner">
+    <!-- HERO BANNER: 3-Slide Auto-Scroll Services Showcase -->
+    <section class="svc-hero-slider" id="svcHeroSlider" aria-label="Services Hero Banner">
+      <div class="svc-slider-track" id="svcSliderTrack">
+
+        <!-- Slide 1: Premium Print Production -->
+        <div class="svc-slide svc-slide--1" role="group" aria-label="Slide 1 of 3">
+          <div class="svc-slide-bg"></div>
+          <div class="svc-slide-inner site-container">
+            <div class="svc-slide-content">
+              <span class="svc-slide-kicker">{ Sivakasi Press House }</span>
+              <h1 class="svc-slide-title">Premium Print<br><em>Production</em> at Scale</h1>
+              <p class="svc-slide-desc">6-colour offset, digital UV, and specialty finishing — delivering world-class print quality direct from our factory floor to your hands.</p>
+              <div class="svc-slide-actions">
+                <a href="all-categories.html" class="svc-btn-primary">Explore Catalogue <i class="bi bi-arrow-right"></i></a>
+                <a href="quotation.html" class="svc-btn-outline">Get Free Quote</a>
+              </div>
+              <div class="svc-slide-stats">
+                <div class="svc-stat"><span class="svc-stat-num">10K+</span><span class="svc-stat-label">Orders Delivered</span></div>
+                <div class="svc-stat"><span class="svc-stat-num">24 Hrs</span><span class="svc-stat-label">Fast Turnaround</span></div>
+                <div class="svc-stat"><span class="svc-stat-num">500+</span><span class="svc-stat-label">Happy Clients</span></div>
+              </div>
+            </div>
+            <div class="svc-slide-visual">
+              <div class="svc-visual-card svc-visual-card--main">
+                <i class="bi bi-printer-fill"></i>
+                <span>Offset Printing</span>
+              </div>
+              <div class="svc-visual-card svc-visual-card--accent">
+                <i class="bi bi-stars"></i>
+                <span>Special Finish</span>
+              </div>
+              <div class="svc-visual-card svc-visual-card--sm">
+                <i class="bi bi-patch-check-fill"></i>
+                <span>ISO Quality</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Packaging & Boxes -->
+        <div class="svc-slide svc-slide--2" role="group" aria-label="Slide 2 of 3">
+          <div class="svc-slide-bg"></div>
+          <div class="svc-slide-inner site-container">
+            <div class="svc-slide-content">
+              <span class="svc-slide-kicker">{ Packaging Experts }</span>
+              <h2 class="svc-slide-title">Custom Packaging<br><em>Boxes &amp; Cartons</em></h2>
+              <p class="svc-slide-desc">Rigid magnetic boxes, thermal soft-touch cartons, mono-carton auto-lock packaging — crafted to perfection for luxury brands and retail shelves.</p>
+              <div class="svc-slide-actions">
+                <a href="all-categories.html?category=packaging" class="svc-btn-primary">Shop Packaging <i class="bi bi-arrow-right"></i></a>
+                <a href="contact.html" class="svc-btn-outline">Talk to Us</a>
+              </div>
+              <div class="svc-slide-tags">
+                <span class="svc-tag"><i class="bi bi-box-seam-fill"></i> Mono Carton</span>
+                <span class="svc-tag"><i class="bi bi-box2-heart-fill"></i> Rigid Boxes</span>
+                <span class="svc-tag"><i class="bi bi-recycle"></i> Eco Friendly</span>
+                <span class="svc-tag"><i class="bi bi-diamond-fill"></i> Luxury Finish</span>
+              </div>
+            </div>
+            <div class="svc-slide-visual">
+              <div class="svc-visual-card svc-visual-card--main svc-visual-card--pkg">
+                <i class="bi bi-box-seam-fill"></i>
+                <span>Packaging</span>
+              </div>
+              <div class="svc-visual-card svc-visual-card--accent svc-visual-card--foil">
+                <i class="bi bi-fire"></i>
+                <span>Hot Foil</span>
+              </div>
+              <div class="svc-visual-card svc-visual-card--sm">
+                <i class="bi bi-layers-fill"></i>
+                <span>6 Layers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Brand Identity & Design -->
+        <div class="svc-slide svc-slide--3" role="group" aria-label="Slide 3 of 3">
+          <div class="svc-slide-bg"></div>
+          <div class="svc-slide-inner site-container">
+            <div class="svc-slide-content">
+              <span class="svc-slide-kicker">{ Brand Studio }</span>
+              <h2 class="svc-slide-title">Brand Identity<br><em>Design &amp; Print</em></h2>
+              <p class="svc-slide-desc">Logo systems, business cards with gold foil, corporate stationery kits, and product catalogues that make your brand unforgettable.</p>
+              <div class="svc-slide-actions">
+                <a href="all-categories.html?category=business" class="svc-btn-primary">Brand Products <i class="bi bi-arrow-right"></i></a>
+                <a href="portfolio.html" class="svc-btn-outline">View Portfolio</a>
+              </div>
+              <div class="svc-slide-tags">
+                <span class="svc-tag"><i class="bi bi-vector-pen"></i> Logo Design</span>
+                <span class="svc-tag"><i class="bi bi-credit-card-2-front-fill"></i> Business Cards</span>
+                <span class="svc-tag"><i class="bi bi-journal-richtext"></i> Catalogues</span>
+                <span class="svc-tag"><i class="bi bi-palette-fill"></i> Brand Kit</span>
+              </div>
+            </div>
+            <div class="svc-slide-visual">
+              <div class="svc-visual-card svc-visual-card--main svc-visual-card--brand">
+                <i class="bi bi-vector-pen"></i>
+                <span>Brand Design</span>
+              </div>
+              <div class="svc-visual-card svc-visual-card--accent svc-visual-card--card">
+                <i class="bi bi-credit-card-2-front-fill"></i>
+                <span>Business Card</span>
+              </div>
+              <div class="svc-visual-card svc-visual-card--sm">
+                <i class="bi bi-palette-fill"></i>
+                <span>Full Kit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.svc-slider-track -->
+
+      <!-- Dots Navigation -->
+      <div class="svc-dots" role="tablist" aria-label="Slide navigation">
+        <button class="svc-dot active" role="tab" aria-selected="true"  data-slide="0" aria-label="Go to slide 1"></button>
+        <button class="svc-dot"        role="tab" aria-selected="false" data-slide="1" aria-label="Go to slide 2"></button>
+        <button class="svc-dot"        role="tab" aria-selected="false" data-slide="2" aria-label="Go to slide 3"></button>
+      </div>
+
+      <!-- Prev / Next Arrows -->
+      <button class="svc-arrow svc-arrow--prev" id="svcPrev" aria-label="Previous slide"><i class="bi bi-chevron-left"></i></button>
+      <button class="svc-arrow svc-arrow--next" id="svcNext" aria-label="Next slide"><i class="bi bi-chevron-right"></i></button>
+
+      <!-- Progress bar -->
+      <div class="svc-progress-bar"><div class="svc-progress-fill" id="svcProgressFill"></div></div>
+    </section>
+
+    <!-- SECTION 1: Specialized Printing Services Grid (01 - 09) -->
+    <section class="py-4 capabilities-section">
       <div class="site-container">
-        <div class="banner-kicker">{ Complete Catalogue }</div>
-        <h1 class="banner-title">Our Specialized Services</h1>
+        <div class="services-section-header">
+          <span class="services-kicker">{ Full Capabilities }</span>
+          <h2 class="services-sec-title">Our Specialized Printing Capabilities</h2>
+          <p class="services-sec-subtitle">Comprehensive print infrastructure in Sivakasi spanning pre-press, offset, digital, and custom post-press embellishments.</p>
+        </div>
+        <div class="service-grid">
+          <div class="service-card"><span class="service-num">01</span><h3>BRAND IDENTITY</h3><p>Logo design, visual identity systems, brand guidelines, and corporate stationery design.</p></div>
+          <div class="service-card"><span class="service-num">02</span><h3>COMMERCIAL PRINTING</h3><p>High-precision offset printing and digital print solutions for brochures, catalogues, and magazines.</p></div>
+          <div class="service-card"><span class="service-num">03</span><h3>PRODUCT PACKAGING</h3><p>Custom folding cartons, product boxes, retail packaging, and eco-friendly corrugated packaging.</p></div>
+          <div class="service-card"><span class="service-num">04</span><h3>LABELS &amp; STICKERS</h3><p>Custom die-cut stickers, roll labels, barcode labels, and metallic foil embellished labels.</p></div>
+          <div class="service-card"><span class="service-num">05</span><h3>CATALOGUES &amp; BROCHURES</h3><p>Multi-page catalogue layouts, saddle-stitched &amp; perfect-bound brochures for corporate marketing.</p></div>
+          <div class="service-card"><span class="service-num">06</span><h3>BOOKS &amp; PUBLISHING</h3><p>Hardcover, softcover, hardcover bookbinding, coffee table books, and editorial publishing.</p></div>
+          <div class="service-card"><span class="service-num">07</span><h3>LARGE FORMAT PRINT</h3><p>Vinyl banners, flex boards, outdoor signage, exhibition display stands, and wall graphics.</p></div>
+          <div class="service-card"><span class="service-num">08</span><h3>PROMO &amp; MERCHANDISE</h3><p>Custom corporate gifts, branded calendars, diaries, keychains, and promotional merchandise.</p></div>
+          <div class="service-card"><span class="service-num">09</span><h3>FINISHING &amp; SPECIAL EFFECTS</h3><p>Spot UV, foil stamping, embossing, debossing, matte/gloss lamination, and custom die-cutting.</p></div>
+        </div>
       </div>
     </section>
 
-    <section>
-      <div class="site-container service-grid">
-        <div class="service-card"><span class="service-num">01</span><h3>BRAND IDENTITY</h3><p>Logo design, visual identity systems, brand guidelines, and corporate stationery design.</p></div>
-        <div class="service-card"><span class="service-num">02</span><h3>COMMERCIAL PRINTING</h3><p>High-precision offset printing and digital print solutions for brochures, catalogues, and magazines.</p></div>
-        <div class="service-card"><span class="service-num">03</span><h3>PRODUCT PACKAGING</h3><p>Custom folding cartons, product boxes, retail packaging, and eco-friendly corrugated packaging.</p></div>
-        <div class="service-card"><span class="service-num">04</span><h3>LABELS & STICKERS</h3><p>Custom die-cut stickers, roll labels, barcode labels, and metallic foil embellished labels.</p></div>
-        <div class="service-card"><span class="service-num">05</span><h3>CATALOGUES & BROCHURES</h3><p>Multi-page catalogue layouts, saddle-stitched & perfect-bound brochures for corporate marketing.</p></div>
-        <div class="service-card"><span class="service-num">06</span><h3>BOOKS & PUBLISHING</h3><p>Hardcover, softcover, hardcover bookbinding, coffee table books, and editorial publishing.</p></div>
-        <div class="service-card"><span class="service-num">07</span><h3>LARGE FORMAT PRINT</h3><p>Vinyl banners, flex boards, outdoor signage, exhibition display stands, and wall graphics.</p></div>
-        <div class="service-card"><span class="service-num">08</span><h3>PROMO & MERCHANDISE</h3><p>Custom corporate gifts, branded calendars, diaries, keychains, and promotional merchandise.</p></div>
-        <div class="service-card"><span class="service-num">09</span><h3>FINISHING & SPECIAL EFFECTS</h3><p>Spot UV, foil stamping, embossing, debossing, matte/gloss lamination, and custom die-cutting.</p></div>
+    <!-- SECTION 2: Best Selling Products (Hover Glass Shine & Add to Cart) -->
+    <section class="bestsellers-section pt-4 pb-5">
+      <div class="site-container">
+        <div class="services-section-header">
+          <span class="services-kicker">{ High-Demand Print }</span>
+          <h2 class="services-sec-title">Best Selling Products</h2>
+          <p class="services-sec-subtitle">
+            Direct from our Sivakasi manufacturing press. Factory-calibrated, high-volume favorites with fast dispatch and direct WhatsApp ordering.
+          </p>
+        </div>
+
+        <div class="bestsellers-grid">
+          <!-- Item 1: Custom Packaging Boxes -->
+          <div class="service-product-card">
+            <div class="service-product-thumb">
+              <img src="../assets/images/products/custom-boxes.jpg" alt="Custom Packaging Boxes" loading="lazy">
+              <span class="service-product-badge">Packaging</span>
+            </div>
+            <h3 class="service-product-title">Custom Packaging Boxes</h3>
+            <p class="service-product-desc">
+              Engineered mono carton packaging boxes with high-precision folding, auto-lock bases, and 6-color vivid offset printing.
+            </p>
+            <div class="service-product-bottom">
+              <div>
+                <span class="fs-5 fw-bold text-dark">₹3.50</span>
+                <span class="text-muted small">/ pc (500 pcs)</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm btn-add-to-cart px-3"
+                      data-id="PROD-01"
+                      data-title="Custom Packaging Boxes"
+                      data-price="3.50"
+                      data-img="../assets/images/products/custom-boxes.jpg"
+                      data-moq="500 pcs"
+                      data-unit="pc"
+                      data-category="packaging">
+                <i class="bi bi-cart-plus-fill"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Item 2: Luxury Foil Business Cards -->
+          <div class="service-product-card">
+            <div class="service-product-thumb">
+              <img src="../assets/images/products/foil-business-cards.jpg" alt="Luxury Foil Business Cards" loading="lazy">
+              <span class="service-product-badge">Executive</span>
+            </div>
+            <h3 class="service-product-title">Luxury Foil Business Cards</h3>
+            <p class="service-product-desc">
+              400 GSM Cotton Velvet with hot gold foil stamping, gilded painted edges, and velvety soft-touch lamination.
+            </p>
+            <div class="service-product-bottom">
+              <div>
+                <span class="fs-5 fw-bold text-dark">₹499</span>
+                <span class="text-muted small">/ set (100 pcs)</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm btn-add-to-cart px-3"
+                      data-id="PROD-04"
+                      data-title="Luxury Foil Business Cards"
+                      data-price="499"
+                      data-img="../assets/images/products/foil-business-cards.jpg"
+                      data-moq="100 pcs"
+                      data-unit="set"
+                      data-category="business">
+                <i class="bi bi-cart-plus-fill"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Item 3: Waterproof Roll Labels -->
+          <div class="service-product-card">
+            <div class="service-product-thumb">
+              <img src="../assets/images/agency_desk.png" alt="Waterproof Roll Labels" loading="lazy">
+              <span class="service-product-badge">Labels</span>
+            </div>
+            <h3 class="service-product-title">Waterproof Roll Labels</h3>
+            <p class="service-product-desc">
+              Continuously wound roll labels calibrated for automated packaging applicators, cosmetics, and food containers.
+            </p>
+            <div class="service-product-bottom">
+              <div>
+                <span class="fs-5 fw-bold text-dark">₹0.65</span>
+                <span class="text-muted small">/ label (1000 pcs)</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm btn-add-to-cart px-3"
+                      data-id="PROD-11"
+                      data-title="Waterproof Roll Labels"
+                      data-price="0.65"
+                      data-img="../assets/images/agency_desk.png"
+                      data-moq="1000 pcs"
+                      data-unit="label"
+                      data-category="stickers">
+                <i class="bi bi-cart-plus-fill"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Item 4: Expo Roll-Up Banner Standee -->
+          <div class="service-product-card">
+            <div class="service-product-thumb">
+              <img src="../assets/images/products/expo-banner.jpg" alt="Expo Roll-Up Banner Standee" loading="lazy">
+              <span class="service-product-badge">Signage</span>
+            </div>
+            <h3 class="service-product-title">Expo Roll-Up Banner Standee</h3>
+            <p class="service-product-desc">
+              Heavy-duty retractable roll-up exhibition standee with aluminium foot stand, anti-curl canvas, and protective carry case.
+            </p>
+            <div class="service-product-bottom">
+              <div>
+                <span class="fs-5 fw-bold text-dark">₹1,450</span>
+                <span class="text-muted small">/ unit (1 pc)</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm btn-add-to-cart px-3"
+                      data-id="PROD-07"
+                      data-title="Expo Roll-Up Banner Standee"
+                      data-price="1450"
+                      data-img="../assets/images/products/expo-banner.jpg"
+                      data-moq="1 Unit"
+                      data-unit="unit"
+                      data-category="signage">
+                <i class="bi bi-cart-plus-fill"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Modern Bento Grid Showcase Banner -->
+    <section class="bento-showcase-section py-5">
+      <div class="site-container">
+        <div class="services-section-header mb-4">
+          <span class="services-kicker">{ Live Infrastructure }</span>
+          <h2 class="services-sec-title">Our Production Ecosystem &amp; Facility</h2>
+          <p class="services-sec-subtitle">Experience high-speed precision manufacturing in Sivakasi — Heidelberg 6-color offset press runs, automated rigid box lines, and luxury foil relief.</p>
+        </div>
+
+        <div class="bento-grid-container">
+          <!-- TOP ROW (3 Columns: Tile 1, Tile 2, Tile 3) -->
+          
+          <!-- Tile 1: Media Player Card (Top-Left) -->
+          <div class="bento-card bento-media-card" style="background-image: linear-gradient(180deg, rgba(20,22,27,0.2) 0%, rgba(20,22,27,0.85) 100%), url('../assets/images/services/commercial.png');">
+            <button type="button" class="bento-play-btn" aria-label="Play Facility Video Tour">
+              <i class="bi bi-play-fill"></i>
+            </button>
+            <div class="bento-media-footer">
+              <div class="bento-media-title">6-Color Offset Press Run...</div>
+              <span class="bento-media-badge">04:20</span>
+            </div>
+          </div>
+
+          <!-- Tile 2: Pre-Press & CTP Dark Card (Top-Middle) -->
+          <div class="bento-card bento-dark-card bento-team-card">
+            <h3 class="bento-card-title">Pre-Press &amp; CTP</h3>
+            <div class="bento-skeleton-bars">
+              <div class="bento-bar-line bento-bar-1"><span>2400 DPI Thermal Laser</span></div>
+              <div class="bento-bar-line bento-bar-2"><span>Delta-E &lt; 1.5 Calibration</span></div>
+            </div>
+            <div class="bento-user-row">
+              <div class="bento-avatar-wrap">
+                <img src="../assets/images/logo/colour-graphicz.png" alt="Pre-Press Master" class="bento-avatar-img">
+              </div>
+              <div class="bento-user-info">
+                <span class="bento-user-name">Sivakasi Master Press</span>
+                <span class="bento-user-role">Pre-Press Automation</span>
+              </div>
+              <span class="bento-bookmark-icon"><i class="bi bi-bookmark-fill"></i></span>
+            </div>
+          </div>
+
+          <!-- Tile 3: City / Dispatch Metric Dark Card (Top-Right) -->
+          <div class="bento-card bento-dark-card bento-stat-card">
+            <div class="bento-stat-header">
+              <span class="bento-stat-city">Sivakasi Hub</span>
+              <button type="button" class="bento-dots-btn" aria-label="Options"><i class="bi bi-three-dots"></i></button>
+            </div>
+            <div class="bento-stat-badge-line">
+              <span class="bento-status-pill">Fast Dispatch 24/7</span>
+            </div>
+            <div class="bento-stat-main">
+              <div class="bento-stat-huge">24<span class="bento-stat-unit">h</span></div>
+              <div class="bento-stat-icon">
+                <i class="bi bi-sun-fill text-warning"></i>
+              </div>
+            </div>
+            <div class="bento-stat-sub">Same-Day Express Proofing</div>
+          </div>
+
+          <!-- BOTTOM ROW (Tile 4: 1 Col, Tile 5: 2 Col) -->
+
+          <!-- Tile 4: Vertical Product Showcase Card (Bottom-Left) -->
+          <div class="bento-card bento-vertical-card">
+            <div class="bento-vert-media" style="background-image: url('../assets/images/services/packaging.png');">
+              <button type="button" class="bento-heart-btn" aria-label="Save to Favorites">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+              <div class="bento-carousel-dots">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="bento-vert-footer">
+              <span class="bento-vert-title">Rigid Setup Box</span>
+              <span class="bento-vert-tag">Magnetic Closure</span>
+            </div>
+          </div>
+
+          <!-- Tile 5: Wide Panoramic Embellishments Card (Bottom-Right) -->
+          <div class="bento-card bento-wide-card" style="background-image: linear-gradient(90deg, rgba(20,22,27,0.92) 0%, rgba(20,22,27,0.7) 50%, rgba(20,22,27,0.2) 100%), url('../assets/images/products/foil-business-cards.jpg');">
+            <div class="bento-wide-top">
+              <span class="bento-category-pill">SPECIAL FINISHING</span>
+              <button type="button" class="bento-dots-btn bento-dots-btn-light" aria-label="Options"><i class="bi bi-three-dots"></i></button>
+            </div>
+            <div class="bento-wide-content">
+              <h3 class="bento-wide-title">Thermal Soft-Touch &amp; 3D Gold Foil</h3>
+              <a href="all-categories.html?category=business" class="bento-wide-link">
+                View Embellishments Range <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: { Complete Product Range } Our Manufactured Products -->
+    <section class="manufactured-products-section py-5">
+      <div class="site-container">
+        <div class="services-section-header text-center">
+          <span class="services-kicker">{ Complete Product Range }</span>
+          <h2 class="services-sec-title">Our Manufactured Products</h2>
+          <p class="services-sec-subtitle mx-auto" style="max-width: 760px;">
+            Manufactured in-house at our Sivakasi industrial printing press. Explore our signature product lines engineered with ISO precision, rapid dispatch, and direct order checkout.
+          </p>
+        </div>
+
+        <div class="manufactured-grid">
+          <!-- Card 1 -->
+          <div class="mfg-product-card">
+            <div class="mfg-card-thumb">
+              <img src="../assets/images/products/custom-boxes.jpg" alt="Folding Cartons & Packaging" loading="lazy">
+              <span class="mfg-tag">Packaging</span>
+            </div>
+            <div class="mfg-card-body">
+              <h3 class="mfg-card-title">Folding Cartons &amp; Product Boxes</h3>
+              <p class="mfg-card-desc">Engineered mono cartons, sleeve boxes, and corrugated dispatch shippers with auto-bottom lock.</p>
+              <div class="mfg-card-meta">
+                <span class="mfg-spec"><i class="bi bi-layers-fill"></i> 300–450 GSM</span>
+                <span class="mfg-price">From ₹3.50/pc</span>
+              </div>
+              <a href="all-categories.html?category=packaging" class="btn mfg-action-btn w-100">
+                <i class="bi bi-box-seam"></i> View Packaging Range
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="mfg-product-card">
+            <div class="mfg-card-thumb">
+              <img src="../assets/images/products/stickers-by-shape.jpg" alt="Die-Cut Stickers & Labels" loading="lazy">
+              <span class="mfg-tag">Stickers &amp; Labels</span>
+            </div>
+            <div class="mfg-card-body">
+              <h3 class="mfg-card-title">Precision Die-Cut &amp; Roll Labels</h3>
+              <p class="mfg-card-desc">Waterproof vinyl, clear PP, chrome metallic film, and machine applicator roll labels.</p>
+              <div class="mfg-card-meta">
+                <span class="mfg-spec"><i class="bi bi-droplet-half"></i> Waterproof Vinyl</span>
+                <span class="mfg-price">From ₹0.65/pc</span>
+              </div>
+              <a href="all-categories.html?category=stickers" class="btn mfg-action-btn w-100">
+                <i class="bi bi-tag-fill"></i> View Labels Range
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="mfg-product-card">
+            <div class="mfg-card-thumb">
+              <img src="../assets/images/products/foil-business-cards.jpg" alt="Luxury Business Cards" loading="lazy">
+              <span class="mfg-tag">Business Cards</span>
+            </div>
+            <div class="mfg-card-body">
+              <h3 class="mfg-card-title">Luxury Foil &amp; Velvet Cards</h3>
+              <p class="mfg-card-desc">400 GSM Cotton Velvet with hot gold/silver foil stamping, spot UV relief, and edge gilding.</p>
+              <div class="mfg-card-meta">
+                <span class="mfg-spec"><i class="bi bi-gem"></i> 400 GSM Velvet</span>
+                <span class="mfg-price">From ₹499/set</span>
+              </div>
+              <a href="all-categories.html?category=business" class="btn mfg-action-btn w-100">
+                <i class="bi bi-briefcase-fill"></i> View Business Cards
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="mfg-product-card">
+            <div class="mfg-card-thumb">
+              <img src="../assets/images/services/commercial.png" alt="Hardcover Catalogues & Corporate Brochures" loading="lazy">
+              <span class="mfg-tag">Catalogues &amp; Books</span>
+            </div>
+            <div class="mfg-card-body">
+              <h3 class="mfg-card-title">Hardcover Catalogues &amp; Brochures</h3>
+              <p class="mfg-card-desc">Multi-page corporate catalogues, saddle-stitched product brochures, and hardbound presentation folders.</p>
+              <div class="mfg-card-meta">
+                <span class="mfg-spec"><i class="bi bi-book-half"></i> Saddle / Perfect Bound</span>
+                <span class="mfg-price">From ₹12.50/pc</span>
+              </div>
+              <a href="all-categories.html?category=publishing" class="btn mfg-action-btn w-100">
+                <i class="bi bi-journal-richtext"></i> View Catalogues Range
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner redirect to Our Products page -->
+        <div class="manufactured-cta-bar text-center mt-4">
+          <a href="products.html" class="btn btn-primary px-5 py-3 fw-bold rounded-pill shadow">
+            <i class="bi bi-grid-3x3-gap-fill me-2"></i> Explore Complete Manufactured Range &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Customer Testimonials Grid (Image 2 Bottom Layout) -->
+    <section class="testimonials-section">
+      <div class="site-container">
+        <div class="services-section-header">
+          <span class="services-kicker">{ Client Proof }</span>
+          <h2 class="services-sec-title">Trusted by Leading Indian Brands</h2>
+          <p class="services-sec-subtitle">Over 15,000+ completed print assignments delivered on time across Tamil Nadu and Pan India.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              "The custom folding cartons we ordered arrived with immaculate Spot UV alignment and vivid color consistency across 50,000 boxes. The Sivakasi delivery arrived 2 days ahead of schedule!"
+            </p>
+            <div class="testimonial-author-row">
+              <div class="testimonial-avatar">RK</div>
+              <div>
+                <h4 class="testimonial-name">R. Karthikeyan</h4>
+                <p class="testimonial-company">Director, Confectionery & Sweets, Madurai</p>
+              </div>
+              <span class="testimonial-verified"><i class="bi bi-check-circle-fill"></i> Verified</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              "Our gold metallic foil stickers and soft-touch rigid boxes elevated our cosmetic brand's unboxing experience completely. The direct WhatsApp cart system made re-ordering effortless."
+            </p>
+            <div class="testimonial-author-row">
+              <div class="testimonial-avatar">PS</div>
+              <div>
+                <h4 class="testimonial-name">Pooja Sundaram</h4>
+                <p class="testimonial-company">Founder, Aura Botanicals, Chennai</p>
+              </div>
+              <span class="testimonial-verified"><i class="bi bi-check-circle-fill"></i> Verified</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              "We ordered 12 roll-up standees and 5,000 tri-fold brochures for our annual expo. The color fidelity on the 6-color Heidelberg press was sharper than any previous print vendor we used."
+            </p>
+            <div class="testimonial-author-row">
+              <div class="testimonial-avatar">VR</div>
+              <div>
+                <h4 class="testimonial-name">Venkatesh Rao</h4>
+                <p class="testimonial-company">Head of Marketing, Apex Expos, Bengaluru</p>
+              </div>
+              <span class="testimonial-verified"><i class="bi bi-check-circle-fill"></i> Verified</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -142,6 +671,8 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="all-categories.html">All Categories</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
           </ul>
         </div>
@@ -182,190 +713,89 @@
     </div>
   </footer>
 
+  <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Modular Scripts -->
+  <script src="../js/theme.js"></script>
+  <script src="../js/clock.js"></script>
+  <script src="../js/canvas.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/cart.js"></script>
+
+  <!-- Services Hero Slider Script -->
   <script>
-    "use strict";
-    document.addEventListener("DOMContentLoaded", () => {
-      // 1. Theme Toggle
-      const themeToggleBtn = document.getElementById("themeToggleBtn");
+  (function () {
+    const slider   = document.getElementById('svcHeroSlider');
+    const track    = document.getElementById('svcSliderTrack');
+    const dots     = document.querySelectorAll('.svc-dot');
+    const fill     = document.getElementById('svcProgressFill');
+    const prevBtn  = document.getElementById('svcPrev');
+    const nextBtn  = document.getElementById('svcNext');
+    const TOTAL    = 3;
+    const INTERVAL = 5000;
+    let current    = 0;
+    let timer      = null;
+    let progTimer  = null;
 
-      const applyTheme = (mode) => {
-        const isDark = mode === "dark" || (mode === "auto" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-        document.body.classList.toggle("dark-mode", isDark);
-        if (themeToggleBtn) {
-          const icon = themeToggleBtn.querySelector("i");
-          if (icon) icon.className = isDark ? "bi bi-sun-fill" : "bi bi-moon-stars-fill";
-        }
-      };
-
-      let themeMode = localStorage.getItem("theme-mode") || "auto";
-      applyTheme(themeMode);
-
-      themeToggleBtn?.addEventListener("click", () => {
-        themeMode = document.body.classList.contains("dark-mode") ? "light" : "dark";
-        localStorage.setItem("theme-mode", themeMode);
-        applyTheme(themeMode);
+    /* ── Core: move track by exact pixel width of the slider container ── */
+    function goTo(idx) {
+      current = (idx + TOTAL) % TOTAL;
+      const slideW = slider.offsetWidth;          // real pixel width of visible area
+      track.style.transform = `translateX(-${current * slideW}px)`;
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+        d.setAttribute('aria-selected', String(i === current));
       });
+      resetProgress();
+    }
 
-      // 2. IST India Time Clock (Header + Footer)
-      const clock = document.getElementById("indiaClock");
-      const meridiem = document.getElementById("clockMeridiem");
-      const footerClock = document.getElementById("footerClockTime");
+    function resetProgress() {
+      fill.style.transition = 'none';
+      fill.style.width      = '0%';
+      clearTimeout(progTimer);
+      progTimer = setTimeout(() => {
+        fill.style.transition = `width ${INTERVAL}ms linear`;
+        fill.style.width      = '100%';
+      }, 30);
+    }
 
-      const renderIndiaClock = () => {
-        const now = new Date();
-        const parts = new Intl.DateTimeFormat("en-US", {
-          timeZone: "Asia/Kolkata",
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: true
-        }).formatToParts(now);
+    function startAuto() {
+      stopAuto();
+      timer = setInterval(() => goTo(current + 1), INTERVAL);
+    }
+    function stopAuto() { clearInterval(timer); }
 
-        const values = Object.fromEntries(parts.map((p) => [p.type, p.value]));
-        const time = `${values.hour}${values.minute}${values.second}`;
-        const formattedFull = `${values.hour}:${values.minute}:${values.second} ${values.dayPeriod.toUpperCase()}`;
+    // Arrow buttons
+    prevBtn.addEventListener('click', () => { goTo(current - 1); startAuto(); });
+    nextBtn.addEventListener('click', () => { goTo(current + 1); startAuto(); });
 
-        if (footerClock) {
-          footerClock.textContent = formattedFull;
-        }
-
-        if (clock && meridiem) {
-          const previous = clock.dataset.value || "";
-          clock.innerHTML = "";
-          [...time].forEach((digit, index) => {
-            const tile = document.createElement("span");
-            tile.className = `clock-digit${previous[index] && previous[index] !== digit ? " is-changing" : ""}`;
-            tile.textContent = digit;
-            clock.append(tile);
-            if (index === 1 || index === 3) {
-              const sep = document.createElement("span");
-              sep.className = "clock-separator";
-              sep.textContent = ":";
-              clock.append(sep);
-            }
-          });
-          clock.dataset.value = time;
-          meridiem.textContent = values.dayPeriod;
-        }
-      };
-      renderIndiaClock();
-      setInterval(renderIndiaClock, 1000);
-
-      // 3. Global Interactive Dot Grid Canvas Background (Body / All Sections)
-      (function initGlobalDotGridCanvas() {
-        const canvas = document.getElementById("globalDotGridCanvas");
-        if (!canvas) return;
-        const ctx = canvas.getContext("2d");
-
-        const DARK_PALETTE = ["#00aeef", "#ec008c", "#ffd400", "#A0ED32"];
-        const LIGHT_PALETTE = ["#0089b8", "#c2007f", "#c99400", "#5f9d2d"];
-
-        const GRID = 36;
-        const CURSOR_RADIUS = 180;
-        const RIPPLE_SPEED = 10;
-        const RIPPLE_WIDTH = 30;
-
-        let w, h, dots = [], ripples = [];
-        let mouse = { x: -9999, y: -9999 };
-
-        function resize() {
-          w = canvas.width = window.innerWidth;
-          h = canvas.height = window.innerHeight;
-          buildDots();
-        }
-
-        function buildDots() {
-          dots = [];
-          const isDark = document.body.classList.contains("dark-mode");
-          const palette = isDark ? DARK_PALETTE : LIGHT_PALETTE;
-
-          for (let y = 30; y < h; y += GRID) {
-            for (let x = 30; x < w; x += GRID) {
-              dots.push({
-                x, y,
-                power: 0,
-                colorIdx: Math.floor(Math.random() * palette.length)
-              });
-            }
-          }
-        }
-
-        window.addEventListener("mousemove", (e) => {
-          mouse.x = e.clientX;
-          mouse.y = e.clientY;
-        });
-
-        window.addEventListener("mouseleave", () => {
-          mouse.x = -9999;
-          mouse.y = -9999;
-        });
-
-        window.addEventListener("click", (e) => {
-          ripples.push({
-            x: e.clientX,
-            y: e.clientY,
-            r: 0
-          });
-        });
-
-        function renderLoop() {
-          ctx.clearRect(0, 0, w, h);
-
-          const isDark = document.body.classList.contains("dark-mode");
-          const palette = isDark ? DARK_PALETTE : LIGHT_PALETTE;
-
-          ripples.forEach((r) => r.r += RIPPLE_SPEED);
-          ripples = ripples.filter((r) => r.r < Math.max(w, h) * 0.9);
-
-          dots.forEach((dot) => {
-            let glow = 0;
-
-            const cd = Math.hypot(dot.x - mouse.x, dot.y - mouse.y);
-            if (cd < CURSOR_RADIUS) {
-              glow = Math.max(glow, 1 - cd / CURSOR_RADIUS);
-            }
-
-            ripples.forEach((r) => {
-              const d = Math.hypot(dot.x - r.x, dot.y - r.y);
-              const ring = Math.abs(d - r.r);
-              if (ring < RIPPLE_WIDTH) {
-                glow = Math.max(glow, 1 - ring / RIPPLE_WIDTH);
-              }
-            });
-
-            dot.power += (glow - dot.power) * 0.15;
-
-            const dotColor = palette[dot.colorIdx % palette.length];
-
-            ctx.beginPath();
-            ctx.fillStyle = dotColor;
-            ctx.shadowColor = dotColor;
-            ctx.shadowBlur = dot.power * 25;
-
-            if (isDark) {
-              ctx.globalAlpha = 0.12 + dot.power * 0.85;
-            } else {
-              ctx.globalAlpha = 0.15 + dot.power * 0.75;
-            }
-
-            ctx.arc(dot.x, dot.y, 1.2 + dot.power * 3.4, 0, Math.PI * 2);
-            ctx.fill();
-          });
-
-          ctx.globalAlpha = 1;
-          requestAnimationFrame(renderLoop);
-        }
-
-        window.addEventListener("resize", resize);
-        resize();
-        renderLoop();
-      })();
-
-      // 4. Header Scroll Effect
-      const header = document.querySelector(".site-header");
-      window.addEventListener("scroll", () => header?.classList.toggle("is-scrolled", window.scrollY > 10), { passive: true });
+    // Dot clicks
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        goTo(parseInt(dot.dataset.slide, 10));
+        startAuto();
+      });
     });
+
+    // Pause on hover
+    slider.addEventListener('mouseenter', stopAuto);
+    slider.addEventListener('mouseleave', startAuto);
+
+    // Touch / swipe
+    let touchStartX = 0;
+    slider.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) { goTo(dx < 0 ? current + 1 : current - 1); startAuto(); }
+    });
+
+    // Recalculate position on window resize (keeps current slide in view)
+    window.addEventListener('resize', () => goTo(current));
+
+    // Init
+    goTo(0);
+    startAuto();
+  })();
   </script>
-</body>
 </html>
+

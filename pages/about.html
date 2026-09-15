@@ -15,6 +15,7 @@
   <!-- Bootstrap 5 CSS & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/pages.css">
   <link rel="stylesheet" href="../css/responsive.css">
 </head>
@@ -41,11 +42,19 @@
             <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="all-categories.html">All Categories</a></li>
             <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
             <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
           </ul>
-          <a class="quote-button" href="quotation.html">Get a Free Quotation <i class="bi bi-arrow-up-right"></i></a>
+          <div class="d-flex align-items-center gap-2">
+            <a class="quote-button" href="quotation.html">Get a Free Quotation <i class="bi bi-arrow-up-right"></i></a>
+            <button type="button" class="nav-cart-btn" data-bs-toggle="offcanvas" data-bs-target="#smcgCartOffcanvas" aria-label="View Cart">
+              <i class="bi bi-bag-check-fill"></i>
+              <span>Cart</span>
+              <span class="nav-cart-badge" id="navCartBadge">0</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -153,6 +162,8 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="all-categories.html">All Categories</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
           </ul>
         </div>
@@ -193,190 +204,15 @@
     </div>
   </footer>
 
+  <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    "use strict";
-    document.addEventListener("DOMContentLoaded", () => {
-      // 1. Theme Toggle
-      const themeToggleBtn = document.getElementById("themeToggleBtn");
-
-      const applyTheme = (mode) => {
-        const isDark = mode === "dark" || (mode === "auto" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-        document.body.classList.toggle("dark-mode", isDark);
-        if (themeToggleBtn) {
-          const icon = themeToggleBtn.querySelector("i");
-          if (icon) icon.className = isDark ? "bi bi-sun-fill" : "bi bi-moon-stars-fill";
-        }
-      };
-
-      let themeMode = localStorage.getItem("theme-mode") || "auto";
-      applyTheme(themeMode);
-
-      themeToggleBtn?.addEventListener("click", () => {
-        themeMode = document.body.classList.contains("dark-mode") ? "light" : "dark";
-        localStorage.setItem("theme-mode", themeMode);
-        applyTheme(themeMode);
-      });
-
-      // 2. IST India Time Clock (Header + Footer)
-      const clock = document.getElementById("indiaClock");
-      const meridiem = document.getElementById("clockMeridiem");
-      const footerClock = document.getElementById("footerClockTime");
-
-      const renderIndiaClock = () => {
-        const now = new Date();
-        const parts = new Intl.DateTimeFormat("en-US", {
-          timeZone: "Asia/Kolkata",
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: true
-        }).formatToParts(now);
-
-        const values = Object.fromEntries(parts.map((p) => [p.type, p.value]));
-        const time = `${values.hour}${values.minute}${values.second}`;
-        const formattedFull = `${values.hour}:${values.minute}:${values.second} ${values.dayPeriod.toUpperCase()}`;
-
-        if (footerClock) {
-          footerClock.textContent = formattedFull;
-        }
-
-        if (clock && meridiem) {
-          const previous = clock.dataset.value || "";
-          clock.innerHTML = "";
-          [...time].forEach((digit, index) => {
-            const tile = document.createElement("span");
-            tile.className = `clock-digit${previous[index] && previous[index] !== digit ? " is-changing" : ""}`;
-            tile.textContent = digit;
-            clock.append(tile);
-            if (index === 1 || index === 3) {
-              const sep = document.createElement("span");
-              sep.className = "clock-separator";
-              sep.textContent = ":";
-              clock.append(sep);
-            }
-          });
-          clock.dataset.value = time;
-          meridiem.textContent = values.dayPeriod;
-        }
-      };
-      renderIndiaClock();
-      setInterval(renderIndiaClock, 1000);
-
-      // 3. Global Interactive Dot Grid Canvas Background (Body / All Sections)
-      (function initGlobalDotGridCanvas() {
-        const canvas = document.getElementById("globalDotGridCanvas");
-        if (!canvas) return;
-        const ctx = canvas.getContext("2d");
-
-        const DARK_PALETTE = ["#00aeef", "#ec008c", "#ffd400", "#A0ED32"];
-        const LIGHT_PALETTE = ["#0089b8", "#c2007f", "#c99400", "#5f9d2d"];
-
-        const GRID = 36;
-        const CURSOR_RADIUS = 180;
-        const RIPPLE_SPEED = 10;
-        const RIPPLE_WIDTH = 30;
-
-        let w, h, dots = [], ripples = [];
-        let mouse = { x: -9999, y: -9999 };
-
-        function resize() {
-          w = canvas.width = window.innerWidth;
-          h = canvas.height = window.innerHeight;
-          buildDots();
-        }
-
-        function buildDots() {
-          dots = [];
-          const isDark = document.body.classList.contains("dark-mode");
-          const palette = isDark ? DARK_PALETTE : LIGHT_PALETTE;
-
-          for (let y = 30; y < h; y += GRID) {
-            for (let x = 30; x < w; x += GRID) {
-              dots.push({
-                x, y,
-                power: 0,
-                colorIdx: Math.floor(Math.random() * palette.length)
-              });
-            }
-          }
-        }
-
-        window.addEventListener("mousemove", (e) => {
-          mouse.x = e.clientX;
-          mouse.y = e.clientY;
-        });
-
-        window.addEventListener("mouseleave", () => {
-          mouse.x = -9999;
-          mouse.y = -9999;
-        });
-
-        window.addEventListener("click", (e) => {
-          ripples.push({
-            x: e.clientX,
-            y: e.clientY,
-            r: 0
-          });
-        });
-
-        function renderLoop() {
-          ctx.clearRect(0, 0, w, h);
-
-          const isDark = document.body.classList.contains("dark-mode");
-          const palette = isDark ? DARK_PALETTE : LIGHT_PALETTE;
-
-          ripples.forEach((r) => r.r += RIPPLE_SPEED);
-          ripples = ripples.filter((r) => r.r < Math.max(w, h) * 0.9);
-
-          dots.forEach((dot) => {
-            let glow = 0;
-
-            const cd = Math.hypot(dot.x - mouse.x, dot.y - mouse.y);
-            if (cd < CURSOR_RADIUS) {
-              glow = Math.max(glow, 1 - cd / CURSOR_RADIUS);
-            }
-
-            ripples.forEach((r) => {
-              const d = Math.hypot(dot.x - r.x, dot.y - r.y);
-              const ring = Math.abs(d - r.r);
-              if (ring < RIPPLE_WIDTH) {
-                glow = Math.max(glow, 1 - ring / RIPPLE_WIDTH);
-              }
-            });
-
-            dot.power += (glow - dot.power) * 0.15;
-
-            const dotColor = palette[dot.colorIdx % palette.length];
-
-            ctx.beginPath();
-            ctx.fillStyle = dotColor;
-            ctx.shadowColor = dotColor;
-            ctx.shadowBlur = dot.power * 25;
-
-            if (isDark) {
-              ctx.globalAlpha = 0.12 + dot.power * 0.85;
-            } else {
-              ctx.globalAlpha = 0.15 + dot.power * 0.75;
-            }
-
-            ctx.arc(dot.x, dot.y, 1.2 + dot.power * 3.4, 0, Math.PI * 2);
-            ctx.fill();
-          });
-
-          ctx.globalAlpha = 1;
-          requestAnimationFrame(renderLoop);
-        }
-
-        window.addEventListener("resize", resize);
-        resize();
-        renderLoop();
-      })();
-
-      // 4. Header Scroll Effect
-      const header = document.querySelector(".site-header");
-      window.addEventListener("scroll", () => header?.classList.toggle("is-scrolled", window.scrollY > 10), { passive: true });
-    });
-  </script>
+  <!-- Modular Scripts -->
+  <script src="../js/theme.js"></script>
+  <script src="../js/clock.js"></script>
+  <script src="../js/canvas.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/cart.js"></script>
 </body>
 </html>
+
+

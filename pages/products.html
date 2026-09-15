@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Our Products - Sri Mahavishnu Colour Graphicz: Custom Packaging, Stickers, Foil Business Cards, Signage & Commercial Printing in Sivakasi">
+  <title>Our Products | Sri Mahavishnu Colour Graphicz</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+  <!-- Global Interactive Dot-Grid Canvas Background -->
+  <canvas id="globalDotGridCanvas"></canvas>
+
+  <header class="site-header" id="top">
+    <div class="site-container header-row">
+      <a class="brand" href="../index.html" aria-label="Sri Mahavishnu Colour Graphicz home">
+        <span class="brand-mark">
+          <img src="../assets/images/logo/colour-graphicz.png" alt="Sri Mahavishnu Colour Graphicz logo">
+        </span>
+        <span class="brand-copy">
+          <span>Sri Mahavishnu</span>
+          <strong>Colour Graphicz</strong>
+        </span>
+      </a>
+
+      <div class="navbar-capsule navbar navbar-expand-lg" aria-label="Primary navigation">
+        <div class="collapse navbar-collapse" id="siteNavigation">
+          <ul class="navbar-nav nav-links mx-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="all-categories.html">All Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <a class="quote-button" href="quotation.html">Get a Free Quotation <i class="bi bi-arrow-up-right"></i></a>
+            <button type="button" class="nav-cart-btn" data-bs-toggle="offcanvas" data-bs-target="#smcgCartOffcanvas" aria-label="View Cart">
+              <i class="bi bi-bag-check-fill"></i>
+              <span>Cart</span>
+              <span class="nav-cart-badge" id="navCartBadge">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="utility-tray header-actions" aria-label="Controls">
+        <button class="mobile-menu-btn nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+          <span class="menu-text">Menu</span>
+        </button>
+
+        <button class="theme-toggle" type="button" id="themeToggleBtn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+
+        <div class="flip-clock" aria-label="Current India time">
+          <span class="clock-zone">IST</span>
+          <div class="clock-digits" id="indiaClock">
+            <span class="clock-digit">0</span><span class="clock-digit">0</span><span class="clock-separator">:</span><span class="clock-digit">0</span><span class="clock-digit">0</span><span class="clock-separator">:</span><span class="clock-digit">0</span><span class="clock-digit">0</span>
+          </div>
+          <span class="clock-meridiem" id="clockMeridiem">AM</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="site-container">
+        <div class="banner-kicker">{ Complete Product Range }</div>
+        <h1 class="banner-title">Our Manufactured Products</h1>
+      </div>
+    </section>
+
+    <!-- Category Filter Bar -->
+    <section>
+      <div class="site-container">
+        <div class="category-filter-wrapper">
+          <!-- Mobile Dropdown Category Filter -->
+          <div class="mobile-category-filter">
+            <div class="mobile-filter-card">
+              <div class="mobile-filter-header">
+                <i class="bi bi-funnel-fill mobile-filter-icon"></i>
+                <span class="mobile-filter-title">Filter by Category</span>
+              </div>
+              <select id="mobileCategorySelect" class="form-select mobile-filter-select" aria-label="Filter products by category">
+                <option value="bestseller" selected>★ Bestseller Items</option>
+                <option value="packaging">📦 Packaging Boxes & Cartons</option>
+                <option value="stickers">🏷️ Stickers & Labels</option>
+                <option value="business">💼 Business Cards & Print</option>
+                <option value="signage">🪧 Signage & Expo Displays</option>
+                <option value="all">🌐 All Categories (Complete Catalogue)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Desktop & Tablet CSS Grid Buttons (NO scroll option) -->
+          <div class="category-filter-nav" role="tablist">
+            <button class="filter-tab-btn active" data-filter="bestseller" role="tab" aria-selected="true">
+              <i class="bi bi-star-fill"></i> Bestseller
+            </button>
+            <button class="filter-tab-btn" data-filter="packaging" role="tab" aria-selected="false">
+              <i class="bi bi-box-seam"></i> Packaging
+            </button>
+            <button class="filter-tab-btn" data-filter="stickers" role="tab" aria-selected="false">
+              <i class="bi bi-tag-fill"></i> Stickers & Labels
+            </button>
+            <button class="filter-tab-btn" data-filter="business" role="tab" aria-selected="false">
+              <i class="bi bi-briefcase-fill"></i> Business & Cards
+            </button>
+            <button class="filter-tab-btn" data-filter="signage" role="tab" aria-selected="false">
+              <i class="bi bi-easel-fill"></i> Signage & Displays
+            </button>
+            <button class="filter-tab-btn" data-filter="all" role="tab" aria-selected="false">
+              <i class="bi bi-grid-fill"></i> All Categories
+            </button>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="product-grid" id="productsContainer">
+          
+          <!-- Card 1: Stickers by Shape -->
+          <div class="product-card" 
+               data-category="bestseller stickers" 
+               data-title="Stickers by Shape"
+               data-img="../assets/images/products/stickers-by-shape.jpg"
+               data-badge="Precision Die-Cut"
+               data-desc="Precision laser & die-cut contour stickers tailored specifically to perfume bottles, cosmetics jars, and distinctive brand containers."
+               data-moq="Starts at 25 pcs"
+               data-material="Waterproof Vinyl / Chrome Film / Clear Transparent"
+               data-finishing="Matte, Gloss, Gold Foil Hot Stamp"
+               data-turnaround="2 - 3 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/products/stickers-by-shape.jpg" alt="Stickers by Shape" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Stickers by Shape</h3>
+              <p class="product-sub">Starts at 25 pcs</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Embossed Stone Print -->
+          <div class="product-card" 
+               data-category="bestseller business"
+               data-title="Embossed Stone Print"
+               data-img="../assets/images/products/embossed-stone-print.jpg"
+               data-badge="Speciality Gift"
+               data-desc="Natural rock slate stone plaque with UV high-density flatbed print, rustic chiseled borders, and presentation display easel feet."
+               data-moq="Single Piece / Custom Batches"
+               data-material="Natural Rock Slate Stone Plaque"
+               data-finishing="UV Embossed Relief Print, Sepia / Full Colour"
+               data-turnaround="3 - 4 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/products/embossed-stone-print.jpg" alt="Embossed Stone Print" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Embossed Stone Print</h3>
+              <p class="product-sub">Custom Design print, single side</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Custom Stickers (Gold Metallic) -->
+          <div class="product-card" 
+               data-category="bestseller stickers"
+               data-title="Custom Stickers"
+               data-img="../assets/images/products/custom-stickers.jpg"
+               data-badge="Gold Metallic"
+               data-desc="Reflective mirror gold & silver metallic die-cut stickers. Ideal for luxury boutique seals, gift boxes, and memorable branding."
+               data-moq="50 pcs"
+               data-material="Gold / Silver Mirror Metallic Foil Film"
+               data-finishing="Waterproof Gloss Adhesive, Peel-Off Backing"
+               data-turnaround="2 - 3 Days">
+            <div class="product-img-wrap">
+              <span class="product-top-badge">Gold Metallic</span>
+              <img src="../assets/images/products/custom-stickers.jpg" alt="Custom Metallic Stickers" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Custom Stickers</h3>
+              <p class="product-sub">Make your brand stick!</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Foil Business Cards -->
+          <div class="product-card" 
+               data-category="bestseller business"
+               data-title="Foil Business Cards"
+               data-img="../assets/images/products/foil-business-cards.jpg"
+               data-badge="Luxury Suite"
+               data-desc="Premium heavyweight business cards finished with hot gold foil stamping, gilded painted edges, and velvety soft-touch lamination."
+               data-moq="100 pcs"
+               data-material="400 GSM Cotton Velvet / Imported Board"
+               data-finishing="Hot Gold Foil Stamping, Spot UV, Gilded Edges"
+               data-turnaround="3 - 4 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/products/foil-business-cards.jpg" alt="Foil Business Cards" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Foil Business Cards</h3>
+              <p class="product-sub">Leave a lasting impression</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: LED Clip On Sign Board -->
+          <div class="product-card" 
+               data-category="signage"
+               data-title="LED Clip On Sign Board"
+               data-img="../assets/images/products/led-sign-board.jpg"
+               data-badge="Ultra-Slim Display"
+               data-desc="Ultra-slim aluminium profile illuminated LED clip-on sign board for food menus, retail promotional boards, and showroom displays."
+               data-moq="1 Unit"
+               data-material="Anodized Aluminium Frame & Acrylic Front"
+               data-finishing="Backlit LED Matrix, Easy Front-Snap Poster Swap"
+               data-turnaround="4 - 5 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/products/led-sign-board.jpg" alt="LED Clip On Sign Board" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">LED Clip On Sign Board</h3>
+              <p class="product-sub">Aluminium Finish Clip-on Signage</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6: Custom Boxes -->
+          <div class="product-card" 
+               data-category="bestseller packaging"
+               data-title="Custom Boxes"
+               data-img="../assets/images/products/custom-boxes.jpg"
+               data-badge="Folding Cartons"
+               data-desc="Engineered mono carton packaging boxes with high-precision folding, auto-lock bases, and vivid offset 6-color graphic printing."
+               data-moq="500 pcs"
+               data-material="300-450 GSM Cyber X / Duplex Board / Kraft"
+               data-finishing="Matte Lamination, Spot UV, Foil Stamping"
+               data-turnaround="5 - 7 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/products/custom-boxes.jpg" alt="Custom Boxes" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Custom Boxes</h3>
+              <p class="product-sub">Discover our collection</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 7: Brochures & Flyers -->
+          <div class="product-card" 
+               data-category="business"
+               data-title="Brochures & Flyers"
+               data-img="../assets/images/products/brochures-flyers.jpg"
+               data-badge="High-Volume Print"
+               data-desc="Multi-panel tri-fold, bi-fold, and gatefold brochures with rich pigment accuracy and crisp, high-definition photography reproduction."
+               data-moq="250 pcs"
+               data-material="130 GSM - 300 GSM Imported Art Paper / Card"
+               data-finishing="Gloss Aqueous Coating, Thermal Matte Finish"
+               data-turnaround="2 - 3 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/products/brochures-flyers.jpg" alt="Brochures & Flyers" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Brochures & Flyers</h3>
+              <p class="product-sub">Tell your brand story</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 8: Expo Hanging Banner -->
+          <div class="product-card" 
+               data-category="bestseller signage"
+               data-title="Expo Hanging Banner"
+               data-img="../assets/images/products/expo-banner.jpg"
+               data-badge="Display Standee"
+               data-desc="Heavy-duty retractable roll-up exhibition standee banner with aluminum foot stand, anti-curl vinyl canvas, and protective carry case."
+               data-moq="1 Unit"
+               data-material="Anti-Curl Satin Canvas / Non-Tear PET Film"
+               data-finishing="Eco-Solvent High Res UV Print, Metal Stand"
+               data-turnaround="1 - 2 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/products/expo-banner.jpg" alt="Expo Hanging Banner" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Expo Hanging Banner</h3>
+              <p class="product-sub">Stand out at every event</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 9: Luxury Rigid Gift Boxes -->
+          <div class="product-card" 
+               data-category="packaging"
+               data-title="Luxury Rigid Boxes"
+               data-img="../assets/images/services/packaging.png"
+               data-badge="Rigid Hardboard"
+               data-desc="Handcrafted rigid setup gift boxes with magnetic closure flaps, bespoke EVA foam inserts, and embossed metallic logos."
+               data-moq="200 pcs"
+               data-material="1.5mm - 3mm Kappa / Grey Board wrapped in Art Paper"
+               data-finishing="Magnetic Catch, Soft Touch Lamination, Gold Hot Foil"
+               data-turnaround="7 - 10 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/services/packaging.png" alt="Luxury Rigid Gift Boxes" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Luxury Rigid Boxes</h3>
+              <p class="product-sub">Magnetic closure & velvet finish</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 10: Custom Kraft Paper Bags -->
+          <div class="product-card" 
+               data-category="packaging"
+               data-title="Custom Kraft Paper Bags"
+               data-img="../assets/images/products/paper-bags.jpg"
+               data-badge="Eco Packaging"
+               data-desc="Eco-friendly recyclable brown & bleached white kraft retail shopping bags with reinforced twisted paper or satin ribbon handles."
+               data-moq="500 pcs"
+               data-material="120 - 250 GSM Virgin Kraft / Bleached Art Paper"
+               data-finishing="Pantone Spot Printing, Die-Cut Rope Eyelets"
+               data-turnaround="4 - 6 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/products/paper-bags.jpg" alt="Custom Kraft Paper Bags" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Kraft Paper Bags</h3>
+              <p class="product-sub">Eco-friendly retail carry bags</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 11: Waterproof Jar & Roll Labels -->
+          <div class="product-card" 
+               data-category="stickers"
+               data-title="Roll Labels & Decals"
+               data-img="../assets/images/agency_desk.png"
+               data-badge="Automated Applicator"
+               data-desc="Continuously wound roll labels calibrated for automated packaging applicators, waterproof jars, honey pots, and pharmaceuticals."
+               data-moq="1000 pcs"
+               data-material="Synthetic BOPP, Thermal Paper, Silver Film"
+               data-finishing="Gloss Varnish, Cold Foil Embellishment, UV Ink"
+               data-turnaround="3 - 4 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/agency_desk.png" alt="Roll Labels & Decals" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Roll Labels & Decals</h3>
+              <p class="product-sub">High-speed applicator labels</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 12: Editorial Books & Planners -->
+          <div class="product-card" 
+               data-category="business"
+               data-title="Corporate Books & Diaries"
+               data-img="../assets/images/agency_main.png"
+               data-badge="Publishing"
+               data-desc="Hardcover coffee table editions, executive year planners, corporate diaries, and section-sewn perfect bound brochures."
+               data-moq="100 pcs"
+               data-material="Natural Shade Woodfree Paper, Hardcover Binding"
+               data-finishing="Foil Stamped Leatherette Cover, Ribbon Bookmark"
+               data-turnaround="5 - 7 Days">
+            <div class="product-img-wrap">
+              <img src="../assets/images/agency_main.png" alt="Corporate Books & Diaries" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Books & Diaries</h3>
+              <p class="product-sub">Editorial printing & binding</p>
+              <button class="btn-product-detail" type="button" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                View details &rarr;
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product Detail Quick-View Modal -->
+  <div class="modal fade product-modal" id="productDetailModal" tabindex="-1" aria-labelledby="modalProductTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="product-modal-spec-badge" id="modalProductBadge">Featured Product</span>
+            <h2 class="modal-title h5 mb-0" id="modalProductTitle">Product Title</h2>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-5">
+              <img src="" alt="" class="product-modal-img" id="modalProductImg">
+            </div>
+            <div class="col-md-7">
+              <p class="text-muted mb-3" id="modalProductDesc">Product description will appear here.</p>
+              
+              <ul class="product-modal-list">
+                <li>
+                  <span>Minimum Order Quantity</span>
+                  <span id="modalProductMoq">500 pcs</span>
+                </li>
+                <li>
+                  <span>Standard Materials</span>
+                  <span id="modalProductMaterial">Art Board / Kraft / Vinyl</span>
+                </li>
+                <li>
+                  <span>Available Finishes</span>
+                  <span id="modalProductFinishing">Spot UV, Foil, Matte</span>
+                </li>
+                <li>
+                  <span>Factory Turnaround</span>
+                  <span id="modalProductTurnaround">3 - 5 Days</span>
+                </li>
+              </ul>
+
+              <div class="d-flex gap-2 mt-4">
+                <a href="quotation.html" id="modalProductQuoteBtn" class="btn-cta-primary w-100 text-center text-decoration-none py-2 px-3 rounded-pill">
+                  Get Free Quotation <i class="bi bi-arrow-up-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating CTA Card Banner (Exact same as Services) -->
+  <section class="site-cta-section">
+    <div class="site-container">
+      <div class="site-cta-card">
+        <h2 class="site-cta-title">Ready to Customize Your Products?</h2>
+        <p class="site-cta-subtitle">From custom packaging cartons to premium retail labels — engineered to perfection in Sivakasi.</p>
+        <div class="site-cta-actions">
+          <a class="btn-cta-primary" href="quotation.html">
+            Request Free Product Samples <i class="bi bi-box-seam-fill"></i>
+          </a>
+          <a class="btn-cta-phone" href="tel:+918438283441">
+            <i class="bi bi-telephone-fill"></i> +91 84382 83441
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Site Footer (Exact same as Services) -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Slogan -->
+        <div class="footer-col footer-col-brand">
+          <a class="brand footer-brand" href="../index.html">
+            <span class="brand-mark">
+              <img src="../assets/images/logo/colour-graphicz.png" alt="Sri Mahavishnu Colour Graphicz logo">
+            </span>
+            <span class="brand-copy">
+              <span>Sri Mahavishnu</span>
+              <strong>Colour Graphicz</strong>
+            </span>
+          </a>
+          <p class="footer-desc">
+            Designs That Speak; Prints That Impress. 6-Color offset printing & custom packaging manufacturer in Sivakasi.
+          </p>
+          <div class="footer-clock-box">
+            <i class="bi bi-clock-history"></i>
+            <span id="footerClockTime">07:42:51 PM</span> (IST)
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="all-categories.html">All Categories</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="quotation.html">Get Quote</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Main Office Contact Info -->
+        <div class="footer-col footer-col-contact">
+          <h4 class="footer-heading">Sivakasi Main Office</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>1073/3 P.K.N. Road, near Nandhini Bakery, Sivakasi - 626189</span>
+            </li>
+            <li>
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+918438283441">+91 84382 83441</a>
+            </li>
+            <li>
+              <i class="bi bi-envelope-fill"></i>
+              <a href="mailto:colourgraphiczdesigner@gmail.com">colourgraphiczdesigner@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 Sri Mahavishnu Colour Graphicz. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Modular Scripts -->
+  <script src="../js/theme.js"></script>
+  <script src="../js/clock.js"></script>
+  <script src="../js/canvas.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/products.js"></script>
+</body>
+</html>
+

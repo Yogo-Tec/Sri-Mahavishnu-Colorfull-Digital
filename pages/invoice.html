@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Digital Order Invoice - Sri Mahavishnu Colour Graphicz Sivakasi">
+  <title>Digital Invoice | Sri Mahavishnu Colour Graphicz</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <style>
+    /* ── Invoice Dedicated Styles ───────────────────────────── */
+    .invoice-wrapper {
+      padding: clamp(30px, 5vw, 60px) 0 clamp(60px, 8vw, 100px);
+    }
+    .invoice-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      max-width: 960px;
+      margin: 0 auto;
+      padding: clamp(24px, 4vw, 56px);
+      position: relative;
+    }
+    body.dark-mode .invoice-card {
+      background: #181a1e;
+      border-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+    .invoice-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-bottom: 28px;
+      border-bottom: 2px dashed var(--line);
+      margin-bottom: 28px;
+    }
+    .invoice-logo-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .invoice-logo-img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+    .invoice-brand-title {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .invoice-brand-sub {
+      font-size: 12px;
+      color: var(--subtext);
+      font-weight: 600;
+    }
+    .invoice-meta-box {
+      text-align: right;
+    }
+    @media (max-width: 575px) {
+      .invoice-meta-box {
+        text-align: left;
+      }
+    }
+    .invoice-badge-status {
+      display: inline-block;
+      background: rgba(160, 237, 50, 0.2);
+      color: #355806;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 8px;
+    }
+    body.dark-mode .invoice-badge-status {
+      background: rgba(160, 237, 50, 0.15);
+      color: #A0ED32;
+    }
+    .invoice-number {
+      font-family: var(--display);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0;
+    }
+    .invoice-date {
+      font-size: 13px;
+      color: var(--subtext);
+      margin-top: 4px;
+    }
+    .invoice-parties-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    @media (max-width: 600px) {
+      .invoice-parties-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .party-card {
+      background: rgba(0, 0, 0, 0.02);
+      border-radius: 16px;
+      padding: 16px 20px;
+      border: 1px solid var(--line);
+    }
+    body.dark-mode .party-card {
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .party-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      color: var(--coral);
+      margin-bottom: 8px;
+    }
+    .party-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .party-text {
+      font-size: 13px;
+      color: var(--subtext);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .invoice-table-wrap {
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+    .invoice-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .invoice-table th {
+      background: rgba(0, 0, 0, 0.03);
+      color: var(--ink);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 800;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--line);
+    }
+    body.dark-mode .invoice-table th {
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .invoice-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      vertical-align: middle;
+    }
+    .invoice-product-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      object-fit: contain;
+      background: #f7f7f9;
+      border: 1px solid var(--line);
+      padding: 4px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    .invoice-summary-box {
+      max-width: 380px;
+      margin-left: auto;
+      padding: 18px 22px;
+      background: rgba(0, 0, 0, 0.02);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    body.dark-mode .invoice-summary-box {
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      padding: 6px 0;
+      color: var(--subtext);
+    }
+    .summary-line.total-line {
+      border-top: 2px solid var(--line);
+      margin-top: 8px;
+      padding-top: 10px;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+    .invoice-actions-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+    .btn-print-bill {
+      background: #1b1c1f;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 99px;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 180ms ease;
+    }
+    .btn-print-bill:hover {
+      background: #33363f;
+      transform: translateY(-2px);
+    }
+    body.dark-mode .btn-print-bill {
+      background: #2a2d35;
+      color: #f8f7f2;
+    }
+    body.dark-mode .btn-print-bill:hover {
+      background: #383c46;
+    }
+    .btn-wa-support {
+      background: #25D366;
+      color: #ffffff;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 99px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      transition: all 180ms ease;
+    }
+    .btn-wa-support:hover {
+      background: #1ebe5d;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .site-header, .site-footer, .invoice-actions-bar, #globalDotGridCanvas {
+        display: none !important;
+      }
+      .invoice-wrapper {
+        padding: 0 !important;
+      }
+      .invoice-card {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Global Interactive Dot-Grid Canvas Background -->
+  <canvas id="globalDotGridCanvas"></canvas>
+
+  <header class="site-header" id="top">
+    <div class="site-container header-row">
+      <a class="brand" href="../index.html" aria-label="Sri Mahavishnu Colour Graphicz home">
+        <span class="brand-mark">
+          <img src="../assets/images/logo/colour-graphicz.png" alt="Sri Mahavishnu Colour Graphicz logo">
+        </span>
+        <span class="brand-copy">
+          <span>Sri Mahavishnu</span>
+          <strong>Colour Graphicz</strong>
+        </span>
+      </a>
+
+      <div class="navbar-capsule navbar navbar-expand-lg" aria-label="Primary navigation">
+        <div class="collapse navbar-collapse" id="siteNavigation">
+          <ul class="navbar-nav nav-links mx-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="all-categories.html">All Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+          <a class="quote-button" href="quotation.html">Get a Free Quotation <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+
+      <div class="utility-tray header-actions" aria-label="Controls">
+        <button class="mobile-menu-btn nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+          <span class="menu-text">Menu</span>
+        </button>
+
+        <button class="theme-toggle" type="button" id="themeToggleBtn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+
+        <div class="flip-clock" aria-label="Current India time">
+          <span class="clock-zone">IST</span>
+          <div class="clock-digits" id="indiaClock">
+            <span class="clock-digit">0</span><span class="clock-digit">0</span><span class="clock-separator">:</span><span class="clock-digit">0</span><span class="clock-digit">0</span><span class="clock-separator">:</span><span class="clock-digit">0</span><span class="clock-digit">0</span>
+          </div>
+          <span class="clock-meridiem" id="clockMeridiem">AM</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="invoice-wrapper">
+      <div class="site-container">
+        <div class="invoice-card" id="invoiceCard">
+          
+          <!-- Header Row -->
+          <div class="invoice-header-row">
+            <div class="invoice-logo-group">
+              <img src="../assets/images/logo/colour-graphicz.png" alt="Sri Mahavishnu Colour Graphicz logo" class="invoice-logo-img">
+              <div>
+                <h1 class="invoice-brand-title">Sri Mahavishnu Colour Graphicz</h1>
+                <div class="invoice-brand-sub">Creative Design, Commercial Printing & Custom Packaging • Sivakasi</div>
+                <div class="invoice-brand-sub mt-1">GSTIN: 33AAAAA0000A1Z5 • Press Unit: 1073/3 P.K.N. Road, Sivakasi - 626189</div>
+              </div>
+            </div>
+
+            <div class="invoice-meta-box">
+              <span class="invoice-badge-status" id="invStatus">Order Placed via WhatsApp • Confirmation Pending</span>
+              <h2 class="invoice-number" id="invNumber">INV-SMCG-2026-0001</h2>
+              <div class="invoice-date" id="invDate">Date: September 7, 2026</div>
+            </div>
+          </div>
+
+          <!-- Parties Row -->
+          <div class="invoice-parties-row">
+            <div class="party-card">
+              <div class="party-title">Billed To (Customer Details):</div>
+              <div class="party-name" id="invCustName">Valued Customer</div>
+              <p class="party-text" id="invCustPhone"><i class="bi bi-telephone me-1"></i> Phone: +91 --</p>
+              <p class="party-text" id="invCustAddress"><i class="bi bi-geo-alt me-1"></i> Address: --</p>
+            </div>
+
+            <div class="party-card">
+              <div class="party-title">Manufactured & Shipped By:</div>
+              <div class="party-name">Sri Mahavishnu Colour Graphicz</div>
+              <p class="party-text">1073/3 P.K.N. Road, near Nandhini Bakery, Sivakasi - 626189, Tamil Nadu, India</p>
+              <p class="party-text"><i class="bi bi-telephone-fill me-1 text-success"></i> +91 84382 83441 | colourgraphiczdesigner@gmail.com</p>
+            </div>
+          </div>
+
+          <!-- Items Table -->
+          <div class="invoice-table-wrap">
+            <table class="invoice-table">
+              <thead>
+                <tr>
+                  <th style="width: 60px;">#</th>
+                  <th>Product Description</th>
+                  <th style="text-align: center;">Selected Spec</th>
+                  <th style="text-align: center;">Qty</th>
+                  <th style="text-align: right;">Unit Price</th>
+                  <th style="text-align: right;">Total Amount</th>
+                </tr>
+              </thead>
+              <tbody id="invItemsBody">
+                <!-- Dynamically populated via JS -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Summary Box -->
+          <div class="invoice-summary-box">
+            <div class="summary-line">
+              <span>Subtotal:</span>
+              <span id="invSubtotal">₹0.00</span>
+            </div>
+            <div class="summary-line">
+              <span>Packaging & Factory Handling:</span>
+              <span class="text-success font-weight-bold">FREE</span>
+            </div>
+            <div class="summary-line">
+              <span>GST / Taxes:</span>
+              <span class="text-muted fw-semibold">Inclusive (0% IGST)</span>
+            </div>
+            <div class="summary-line text-success" id="invDiscountRow" style="display: none;">
+              <span id="invDiscountLabel">Coupon Discount:</span>
+              <span id="invDiscount" class="fw-bold">- ₹0.00</span>
+            </div>
+            <div class="summary-line total-line">
+              <span>Grand Total:</span>
+              <span id="invGrandTotal">₹0.00</span>
+            </div>
+          </div>
+
+          <!-- Actions Bar -->
+          <div class="invoice-actions-bar">
+            <a href="all-categories.html" class="btn-card-quote text-decoration-none">
+              <i class="bi bi-arrow-left"></i> Continue Shopping
+            </a>
+            <div class="d-flex gap-2">
+              <button class="btn-print-bill" type="button" onclick="window.print()">
+                <i class="bi bi-printer-fill"></i> Print / Save PDF
+              </button>
+              <a href="https://wa.me/918438283441" target="_blank" rel="noopener" class="btn-wa-support">
+                <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Main Site Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-bottom-bar">
+        <p>© 2026 Sri Mahavishnu Colour Graphicz. Official Digital Invoice System.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/clock.js"></script>
+  <script src="../js/canvas.js"></script>
+  <script src="../js/navbar.js"></script>
+
+  <!-- Invoice URL Decoder & Renderer -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const orderId = urlParams.get("id") || "INV-SMCG-" + Math.floor(100000 + Math.random() * 900000);
+      const encodedData = urlParams.get("data");
+
+      let orderData = null;
+
+      if (encodedData) {
+        try {
+          // Decode URL-safe Base64 UTF-8
+          const jsonStr = decodeURIComponent(escape(atob(encodedData)));
+          orderData = JSON.parse(jsonStr);
+        } catch (e) {
+          console.error("Could not parse order payload from URL:", e);
+        }
+      }
+
+      // Fallback to localStorage if available
+      if (!orderData) {
+        const stored = localStorage.getItem("smcg_last_order");
+        if (stored) {
+          try { orderData = JSON.parse(stored); } catch (e) {}
+        }
+      }
+
+      // Render details
+      const invNumber = document.getElementById("invNumber");
+      const invDate = document.getElementById("invDate");
+      const invCustName = document.getElementById("invCustName");
+      const invCustPhone = document.getElementById("invCustPhone");
+      const invCustAddress = document.getElementById("invCustAddress");
+      const invItemsBody = document.getElementById("invItemsBody");
+      const invSubtotal = document.getElementById("invSubtotal");
+      const invDiscountRow = document.getElementById("invDiscountRow");
+      const invDiscountLabel = document.getElementById("invDiscountLabel");
+      const invDiscount = document.getElementById("invDiscount");
+      const invGrandTotal = document.getElementById("invGrandTotal");
+
+      if (invNumber) invNumber.textContent = orderId;
+      if (invDate) {
+        const now = orderData && orderData.date ? new Date(orderData.date) : new Date();
+        invDate.textContent = "Date: " + now.toLocaleDateString("en-IN", {
+          day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit"
+        });
+      }
+
+      if (orderData) {
+        const custName = (orderData.customer && orderData.customer.name) || orderData.name || "Valued Customer";
+        const custPhone = (orderData.customer && orderData.customer.phone) || orderData.phone || "+91 --";
+        const custAddress = (orderData.customer && orderData.customer.address) || orderData.address || "--";
+
+        if (invCustName) invCustName.textContent = custName;
+        if (invCustPhone) invCustPhone.innerHTML = `<i class="bi bi-telephone me-1"></i> Phone: ${custPhone}`;
+        if (invCustAddress) invCustAddress.innerHTML = `<i class="bi bi-geo-alt me-1"></i> Delivery Address: ${custAddress}`;
+
+        if (invItemsBody && Array.isArray(orderData.items)) {
+          invItemsBody.innerHTML = "";
+          let calcSubtotal = 0;
+
+          orderData.items.forEach((item, index) => {
+            const itemQty = item.qty || item.quantity || 1;
+            const itemPrice = typeof item.rate !== "undefined" ? item.rate : (item.price || 0);
+            const itemTotal = typeof item.total !== "undefined" ? item.total : (itemPrice * itemQty);
+            calcSubtotal += itemTotal;
+
+            const itemName = item.name || item.title || "Custom Print Item";
+            const itemSpec = item.spec || item.variant || item.unit || "Custom";
+
+            const priceDisplay = itemPrice < 10 ? `₹${itemPrice.toFixed(2)}` : `₹${itemPrice.toLocaleString("en-IN")}`;
+            const totalDisplay = itemTotal < 10 ? `₹${itemTotal.toFixed(2)}` : `₹${itemTotal.toLocaleString("en-IN")}`;
+
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td style="color: var(--subtext);">${index + 1}</td>
+              <td>
+                ${item.img ? `<img src="${item.img}" class="invoice-product-thumb" alt="${itemName}">` : ''}
+                <strong style="color: var(--ink);">${itemName}</strong>
+              </td>
+              <td style="text-align: center;"><span class="spec-pill active">${itemSpec}</span></td>
+              <td style="text-align: center; font-weight: 700;">${itemQty}</td>
+              <td style="text-align: right;">${priceDisplay}</td>
+              <td style="text-align: right; font-weight: 800; color: var(--ink);">${totalDisplay}</td>
+            `;
+            invItemsBody.appendChild(tr);
+          });
+
+          // Display Subtotal
+          const formattedSubtotal = calcSubtotal < 10 ? `₹${calcSubtotal.toFixed(2)}` : `₹${calcSubtotal.toLocaleString("en-IN")}`;
+          if (invSubtotal) invSubtotal.textContent = formattedSubtotal;
+
+          // Check if coupon applied
+          let discountVal = 0;
+          if (orderData.coupon) {
+            discountVal = orderData.coupon.discount || 0;
+            if (invDiscountRow && invDiscount) {
+              invDiscountRow.style.display = "flex";
+              if (invDiscountLabel) invDiscountLabel.textContent = `Coupon (${orderData.coupon.code}):`;
+              invDiscount.textContent = discountVal < 10 ? `- ₹${discountVal.toFixed(2)}` : `- ₹${discountVal.toLocaleString("en-IN")}`;
+            }
+          } else if (invDiscountRow) {
+            invDiscountRow.style.display = "none";
+          }
+
+          const finalGrandTotal = orderData.grandTotal 
+            ? (typeof orderData.grandTotal === "number" ? `₹${orderData.grandTotal.toLocaleString("en-IN")}` : orderData.grandTotal)
+            : (Math.max(0, calcSubtotal - discountVal) < 10 
+                ? `₹${Math.max(0, calcSubtotal - discountVal).toFixed(2)}` 
+                : `₹${Math.max(0, calcSubtotal - discountVal).toLocaleString("en-IN")}`);
+
+          if (invGrandTotal) invGrandTotal.textContent = finalGrandTotal;
+        }
+      } else {
+        // Mock sample if opened directly without parameters
+        if (invItemsBody) {
+          invItemsBody.innerHTML = `
+            <tr>
+              <td>1</td>
+              <td><strong>Custom Folding Packaging Boxes</strong></td>
+              <td style="text-align: center;"><span class="spec-pill active">500 pcs</span></td>
+              <td style="text-align: center; font-weight: 700;">1</td>
+              <td style="text-align: right;">₹1,750</td>
+              <td style="text-align: right; font-weight: 800;">₹1,750</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>Luxury Foil Business Cards</strong></td>
+              <td style="text-align: center;"><span class="spec-pill active">100 pcs</span></td>
+              <td style="text-align: center; font-weight: 700;">1</td>
+              <td style="text-align: right;">₹499</td>
+              <td style="text-align: right; font-weight: 800;">₹499</td>
+            </tr>
+          `;
+          if (invSubtotal) invSubtotal.textContent = "₹2,249";
+          if (invGrandTotal) invGrandTotal.textContent = "₹2,249";
+        }
+      }
+    });
+  </script>
+</body>
+</html>

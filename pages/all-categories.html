@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="All Categories & Products - Sri Mahavishnu Colour Graphicz: Browse packaging, labels, business cards, signage, and commercial printing catalogue in Gallery & List views.">
+  <title>All Categories | Sri Mahavishnu Colour Graphicz</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+  <!-- Global Interactive Dot-Grid Canvas Background -->
+  <canvas id="globalDotGridCanvas"></canvas>
+
+  <header class="site-header" id="top">
+    <div class="site-container header-row">
+      <a class="brand" href="../index.html" aria-label="Sri Mahavishnu Colour Graphicz home">
+        <span class="brand-mark">
+          <img src="../assets/images/logo/colour-graphicz.png" alt="Sri Mahavishnu Colour Graphicz logo">
+        </span>
+        <span class="brand-copy">
+          <span>Sri Mahavishnu</span>
+          <strong>Colour Graphicz</strong>
+        </span>
+      </a>
+
+      <div class="navbar-capsule navbar navbar-expand-lg" aria-label="Primary navigation">
+        <div class="collapse navbar-collapse" id="siteNavigation">
+          <ul class="navbar-nav nav-links mx-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="all-categories.html">All Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <a class="quote-button" href="quotation.html">Get a Free Quotation <i class="bi bi-arrow-up-right"></i></a>
+            <button type="button" class="nav-cart-btn" data-bs-toggle="offcanvas" data-bs-target="#smcgCartOffcanvas" aria-label="View Cart">
+              <i class="bi bi-bag-check-fill"></i>
+              <span>Cart</span>
+              <span class="nav-cart-badge" id="navCartBadge">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="utility-tray header-actions" aria-label="Controls">
+        <button class="mobile-menu-btn nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+          <span class="menu-text">Menu</span>
+        </button>
+
+        <button class="theme-toggle" type="button" id="themeToggleBtn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+
+        <div class="flip-clock" aria-label="Current India time">
+          <span class="clock-zone">IST</span>
+          <div class="clock-digits" id="indiaClock">
+            <span class="clock-digit">0</span><span class="clock-digit">0</span><span class="clock-separator">:</span><span class="clock-digit">0</span><span class="clock-digit">0</span><span class="clock-separator">:</span><span class="clock-digit">0</span><span class="clock-digit">0</span>
+          </div>
+          <span class="clock-meridiem" id="clockMeridiem">AM</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Auto-Sliding Hero Banner Split Grid (3 Slides Left + 2 Stacked Right) -->
+    <section class="all-cat-hero-section">
+      <div class="site-container">
+        <div class="hero-banner-split-grid">
+          <!-- Left: 3-Slide Auto Slider -->
+          <div class="banner-slider-main" id="heroBannerSlider">
+            <div class="banner-slides-track">
+              <!-- Slide 1: Packaging -->
+              <div class="banner-slide active" style="background-image: linear-gradient(90deg, rgba(17,18,20,0.92) 0%, rgba(17,18,20,0.68) 55%, rgba(17,18,20,0.2) 100%), url('../assets/images/services/packaging.png');">
+                <div class="banner-slide-content">
+                  <span class="banner-pill-kicker"><i class="bi bi-box-seam-fill"></i> Precision Packaging</span>
+                  <h2 class="slide-headline">Custom Mono Cartons & Rigid Boxes</h2>
+                  <p class="slide-subtext">Engineered for retail impact with Spot UV, gold foil stamping, auto-lock structural durability, and 6-color vivid offset printing.</p>
+                  <div class="slide-actions">
+                    <button type="button" class="btn btn-primary btn-add-to-cart" 
+                            data-id="PROD-01" 
+                            data-title="Custom Packaging Boxes" 
+                            data-price="3.50" 
+                            data-img="../assets/images/products/custom-boxes.jpg" 
+                            data-moq="500 pcs" 
+                            data-unit="pc" 
+                            data-category="packaging">
+                      <i class="bi bi-bag-plus-fill"></i> Add to Cart (₹3.50/pc)
+                    </button>
+                    <span class="slide-tag"><i class="bi bi-shield-check text-accent"></i> MOQ Starts at 500 pcs</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Offset Commercial Printing -->
+              <div class="banner-slide" style="background-image: linear-gradient(90deg, rgba(17,18,20,0.92) 0%, rgba(17,18,20,0.68) 55%, rgba(17,18,20,0.2) 100%), url('../assets/images/agency_desk.png');">
+                <div class="banner-slide-content">
+                  <span class="banner-pill-kicker"><i class="bi bi-lightning-charge-fill"></i> Commercial Offset Press</span>
+                  <h2 class="slide-headline">High-Speed 6-Color Heidelberg Printing</h2>
+                  <p class="slide-subtext">Sivakasi's premier commercial hub for bulk catalogues, corporate marketing brochures, and high-volume packaging print runs.</p>
+                  <div class="slide-actions">
+                    <a href="#catalogueGridSection" class="btn btn-primary"><i class="bi bi-eye"></i> Browse Catalogue</a>
+                    <span class="slide-tag"><i class="bi bi-truck text-accent"></i> Fast Sivakasi Dispatch</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3: Waterproof Roll Labels & Stickers -->
+              <div class="banner-slide" style="background-image: linear-gradient(90deg, rgba(17,18,20,0.92) 0%, rgba(17,18,20,0.68) 55%, rgba(17,18,20,0.2) 100%), url('../assets/images/products/custom-stickers.jpg');">
+                <div class="banner-slide-content">
+                  <span class="banner-pill-kicker"><i class="bi bi-tag-fill"></i> Labels & Embellishments</span>
+                  <h2 class="slide-headline">Waterproof Vinyl & Foil Decals</h2>
+                  <p class="slide-subtext">Automated applicator roll labels and precision laser die-cut stickers for cosmetics jars, food containers, and luxury brands.</p>
+                  <div class="slide-actions">
+                    <button type="button" class="btn btn-primary btn-add-to-cart" 
+                            data-id="PROD-03" 
+                            data-title="Custom Gold Metallic Stickers" 
+                            data-price="2.40" 
+                            data-img="../assets/images/products/custom-stickers.jpg" 
+                            data-moq="50 pcs" 
+                            data-unit="pc" 
+                            data-category="stickers">
+                      <i class="bi bi-bag-plus-fill"></i> Order Stickers (₹2.40/pc)
+                    </button>
+                    <span class="slide-tag"><i class="bi bi-droplet-half text-accent"></i> 100% Waterproof & UV Safe</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slider Controls & Indicators -->
+            <div class="banner-slider-controls">
+              <button class="slider-arrow-btn" id="sliderPrevBtn" aria-label="Previous Slide"><i class="bi bi-chevron-left"></i></button>
+              <div class="slider-dots-nav" id="sliderDots">
+                <button class="slider-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="slider-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="slider-dot" data-slide="2" aria-label="Slide 3"></button>
+              </div>
+              <button class="slider-arrow-btn" id="sliderNextBtn" aria-label="Next Slide"><i class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Right: 2 Stacked Rectangle Promo Banners -->
+          <div class="banner-side-stack">
+            <!-- Side Banner 1: Signage -->
+            <div class="side-promo-card promo-card-signage">
+              <div class="side-promo-content">
+                <span class="side-promo-badge"><i class="bi bi-speedometer2"></i> Fast Dispatch</span>
+                <h3 class="side-promo-title">Roll-Up Banners & Signage</h3>
+                <p class="side-promo-desc">Heavy-duty retractable standees ready in 24h for trade expos & showrooms.</p>
+                <a href="all-categories.html?category=signage" class="side-promo-link">Explore Signage <i class="bi bi-arrow-right"></i></a>
+              </div>
+              <div class="side-promo-img">
+                <img src="../assets/images/products/expo-banner.jpg" alt="Expo Roll-up Banner Standee">
+              </div>
+            </div>
+
+            <!-- Side Banner 2: Executive Cards -->
+            <div class="side-promo-card promo-card-cards">
+              <div class="side-promo-content">
+                <span class="side-promo-badge"><i class="bi bi-gem"></i> Executive Suite</span>
+                <h3 class="side-promo-title">Luxury Foil Business Cards</h3>
+                <p class="side-promo-desc">400 GSM Cotton Velvet with hot gold stamping & gilded painted edges.</p>
+                <a href="all-categories.html?category=business" class="side-promo-link">View Executive Cards <i class="bi bi-arrow-right"></i></a>
+              </div>
+              <div class="side-promo-img">
+                <img src="../assets/images/products/foil-business-cards.jpg" alt="Luxury Foil Business Cards">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Catalogue Section with Left Filter Sidebar & Right Products Grid -->
+    <section class="catalogue-main-section" id="catalogueGridSection">
+      <div class="site-container">
+        
+        <div class="catalogue-layout-grid">
+          <!-- Left: Custom Filter Sidebar (UX-Engineered with search, multi-attributes & reset) -->
+          <aside class="catalogue-filter-sidebar" id="catalogueFilterSidebar">
+            <div class="filter-sidebar-header">
+              <h4 class="filter-sidebar-title"><i class="bi bi-sliders"></i> Filter Products</h4>
+              <span class="badge bg-dark text-accent px-2 py-1 small" id="activeFilterBadge">Live</span>
+            </div>
+
+            <!-- 1. Search Keyword -->
+            <div class="filter-group-item">
+              <label class="filter-label" for="filterSearchInput"><i class="bi bi-search"></i> Search Product</label>
+              <div class="filter-input-wrap">
+                <i class="bi bi-search"></i>
+                <input type="text" id="filterSearchInput" class="filter-search-input" placeholder="Type product name, specs...">
+              </div>
+            </div>
+
+            <!-- 2. Product Type Dropdown -->
+            <div class="filter-group-item">
+              <label class="filter-label" for="filterProductType"><i class="bi bi-layers-half"></i> Product Type</label>
+              <select id="filterProductType" class="filter-select">
+                <option value="all">All Product Types</option>
+                <option value="packaging">Packaging Boxes & Cartons</option>
+                <option value="stickers">Stickers & Decal Labels</option>
+                <option value="business">Business Cards & Stationery</option>
+                <option value="signage">Signage & Displays</option>
+                <option value="publishing">Books & Editorial</option>
+                <option value="bags">Retail Paper Bags</option>
+              </select>
+            </div>
+
+            <!-- 3. Classification Dropdown -->
+            <div class="filter-group-item">
+              <label class="filter-label" for="filterClassification"><i class="bi bi-star-half"></i> Classification</label>
+              <select id="filterClassification" class="filter-select">
+                <option value="all">All Classifications</option>
+                <option value="bestseller">★ Bestseller Items</option>
+                <option value="executive">👔 Executive Grade</option>
+                <option value="eco">🌱 Eco Certified</option>
+                <option value="luxury">✨ Luxury Suite</option>
+                <option value="fast">⚡ Fast Turnaround</option>
+              </select>
+            </div>
+
+            <!-- 4. Media / Substrate Dropdown -->
+            <div class="filter-group-item">
+              <label class="filter-label" for="filterMedia"><i class="bi bi-card-image"></i> Substrate / Media</label>
+              <select id="filterMedia" class="filter-select">
+                <option value="all">All Substrates</option>
+                <option value="cyber-x">Cyber X / Duplex Board</option>
+                <option value="vinyl">Waterproof Vinyl Film</option>
+                <option value="cotton-velvet">Cotton Velvet Board</option>
+                <option value="aluminium-acrylic">Aluminium Frame & Acrylic</option>
+                <option value="art-paper">Imported Art Paper</option>
+                <option value="stone-slate">Rock Slate Stone</option>
+                <option value="kraft">Virgin Kraft Paper</option>
+                <option value="grey-board">Kappa / Grey Board</option>
+              </select>
+            </div>
+
+            <!-- 5. GSM / Weight Dropdown -->
+            <div class="filter-group-item">
+              <label class="filter-label" for="filterGsm"><i class="bi bi-speedometer"></i> GSM / Caliper</label>
+              <select id="filterGsm" class="filter-select">
+                <option value="all">All Weights</option>
+                <option value="light">Light (&lt; 150 GSM / Vinyl)</option>
+                <option value="medium">Medium (150 - 300 GSM)</option>
+                <option value="heavy">Heavy (300 - 450 GSM)</option>
+                <option value="rigid">Rigid Board &amp; Acrylic</option>
+              </select>
+            </div>
+
+            <!-- 6. Printing Side Dropdown -->
+            <div class="filter-group-item">
+              <label class="filter-label" for="filterSide"><i class="bi bi-file-earmark-break"></i> Printing Side</label>
+              <select id="filterSide" class="filter-select">
+                <option value="all">All Printing Sides</option>
+                <option value="single">Single Sided Print (1 Side)</option>
+                <option value="double">Double Sided Print (2 Sides)</option>
+              </select>
+            </div>
+
+            <!-- 7. Finishing & Embellishment (UX Addition) -->
+            <div class="filter-group-item">
+              <label class="filter-label" for="filterFinishing"><i class="bi bi-magic"></i> Finishing Effect</label>
+              <select id="filterFinishing" class="filter-select">
+                <option value="all">All Finishing Types</option>
+                <option value="foil">Hot Gold Foil Stamping</option>
+                <option value="spot-uv">Spot UV Gloss</option>
+                <option value="lamination">Matte / Soft-Touch Lamination</option>
+                <option value="embossed">Embossed 3D Relief</option>
+                <option value="die-cut">Precision Laser Die-Cut</option>
+              </select>
+            </div>
+
+            <!-- 8. Reset Filters Button -->
+            <button type="button" id="btnResetFilters" class="btn-reset-filters">
+              <i class="bi bi-arrow-counterclockwise"></i> Reset All Filters
+            </button>
+          </aside>
+
+          <!-- Right: Catalogue Content Area -->
+          <div class="catalogue-content-col">
+            <!-- Category Filter Bar (Desktop Grid & Mobile Dropdown) -->
+            <div class="category-filter-wrapper mb-3">
+              <!-- Mobile: Category Dropdown Box + Filter Button -->
+              <div class="mobile-filter-toolbar">
+                <!-- Mobile Category Menu Dropdown Box -->
+                <div class="mobile-category-dropdown-box">
+                  <i class="bi bi-grid-fill mobile-cat-dropdown-icon"></i>
+                  <select id="mobileCategorySelect" class="mobile-category-select" aria-label="Select Product Category">
+                    <option value="all" selected>All Categories</option>
+                    <option value="bestseller">&#9733; Bestsellers</option>
+                    <option value="packaging">Packaging Boxes</option>
+                    <option value="stickers">Stickers &amp; Labels</option>
+                    <option value="business">Business Cards</option>
+                    <option value="signage">Signage &amp; Displays</option>
+                  </select>
+                  <i class="bi bi-chevron-expand mobile-cat-dropdown-arrow"></i>
+                </div>
+
+                <!-- Mobile Filter Button (opens bottom sheet) -->
+                <button type="button" class="mobile-filter-trigger" id="mobileFilterTriggerBtn" aria-label="Open Filter Options">
+                  <i class="bi bi-sliders"></i>
+                  <span>Filters</span>
+                  <span class="filter-active-count" id="mobileActiveFilterCount">0</span>
+                </button>
+              </div>
+
+              <!-- Desktop-only: Full label category buttons (hidden by CSS on mobile) -->
+              <div class="category-filter-nav category-filter-nav-desktop" role="tablist">
+                <button class="filter-tab-btn" data-filter="all" role="tab" aria-selected="true">
+                  <i class="bi bi-grid-fill"></i> All Categories
+                </button>
+                <button class="filter-tab-btn" data-filter="bestseller" role="tab" aria-selected="false">
+                  <i class="bi bi-star-fill"></i> Bestseller
+                </button>
+                <button class="filter-tab-btn" data-filter="packaging" role="tab" aria-selected="false">
+                  <i class="bi bi-box-seam"></i> Packaging
+                </button>
+                <button class="filter-tab-btn" data-filter="stickers" role="tab" aria-selected="false">
+                  <i class="bi bi-tag-fill"></i> Stickers & Labels
+                </button>
+                <button class="filter-tab-btn" data-filter="business" role="tab" aria-selected="false">
+                  <i class="bi bi-briefcase-fill"></i> Business & Cards
+                </button>
+                <button class="filter-tab-btn" data-filter="signage" role="tab" aria-selected="false">
+                  <i class="bi bi-easel-fill"></i> Signage & Displays
+                </button>
+              </div>
+            </div>
+
+            <!-- Catalogue Toolbar: Count & View Switcher (Gallery vs 2-Column List) -->
+            <div class="catalogue-toolbar">
+              <div class="catalogue-count">
+                Showing <strong id="productCount">12</strong> Products in <span id="activeCategoryName" class="badge-cat-active">All Categories</span>
+              </div>
+              <div class="view-mode-toggle" role="group" aria-label="View Mode Switcher">
+                <button type="button" class="btn-view-mode active" id="viewGalleryBtn" title="Gallery Grid View (1:1 Square)">
+                  <i class="bi bi-grid-3x3-gap-fill"></i> Gallery View
+                </button>
+                <button type="button" class="btn-view-mode" id="viewListBtn" title="List View (2-Column Large Ratio)">
+                  <i class="bi bi-list-task"></i> List View
+                </button>
+              </div>
+            </div>
+
+            <!-- Products Catalogue Container -->
+            <div class="catalogue-container view-gallery" id="catalogueContainer">
+
+              <!-- Product 1: Custom Packaging Boxes -->
+              <article class="all-cat-card" 
+                       data-category="bestseller packaging"
+                       data-type="packaging"
+                       data-class="bestseller"
+                       data-media="cyber-x"
+                       data-gsm="heavy"
+                       data-side="single"
+                       data-finishing="spot-uv foil lamination"
+                       data-price-val="3.50"
+                       data-title="Custom Packaging Boxes"
+                       data-img="../assets/images/products/custom-boxes.jpg"
+                       data-badge="Folding Cartons"
+                       data-desc="Engineered mono carton packaging boxes with high-precision folding, auto-lock bases, and 6-color vivid offset printing."
+                       data-moq="500 pcs"
+                       data-material="300-450 GSM Cyber X / Duplex Board"
+                       data-finishing-text="Matte Lamination, Spot UV, Foil Stamping"
+                       data-turnaround="5 - 7 Days">
+                <div class="card-media">
+                  <img src="../assets/images/products/custom-boxes.jpg" alt="Custom Packaging Boxes" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Custom Packaging Boxes</h3>
+                    <span class="badge-stock">In Stock : 500+ / Day</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">500 pcs</span>
+                    <span class="spec-pill">1000 pcs</span>
+                    <span class="spec-pill">2500 pcs</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Engineered mono cartons with high-precision folding, auto-lock bases, and 6-color vivid offset printing.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹3.50</span><span class="price-unit">/ pc</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-01" 
+                            data-title="Custom Packaging Boxes" 
+                            data-price="3.50" 
+                            data-img="../assets/images/products/custom-boxes.jpg" 
+                            data-moq="500 pcs" 
+                            data-unit="pc" 
+                            data-category="packaging"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 2: Stickers by Shape -->
+              <article class="all-cat-card" 
+                       data-category="bestseller stickers"
+                       data-type="stickers"
+                       data-class="fast bestseller"
+                       data-media="vinyl"
+                       data-gsm="light"
+                       data-side="single"
+                       data-finishing="foil die-cut"
+                       data-price-val="1.20"
+                       data-title="Stickers by Shape"
+                       data-img="../assets/images/products/stickers-by-shape.jpg"
+                       data-badge="Precision Die-Cut"
+                       data-desc="Precision laser & die-cut contour stickers tailored specifically to perfume bottles, cosmetics jars, and distinctive containers."
+                       data-moq="25 pcs"
+                       data-material="Waterproof Vinyl / Chrome Film / Clear Film"
+                       data-finishing-text="Matte, Gloss, Gold Foil Hot Stamp"
+                       data-turnaround="2 - 3 Days">
+                <div class="card-media">
+                  <img src="../assets/images/products/stickers-by-shape.jpg" alt="Stickers by Shape" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Stickers by Shape</h3>
+                    <span class="badge-stock">Fast Turnaround</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">25 pcs</span>
+                    <span class="spec-pill">100 pcs</span>
+                    <span class="spec-pill">500 pcs</span>
+                    <span class="spec-pill">1000 pcs</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Precision laser & die-cut contour stickers tailored specifically to perfume bottles, cosmetics jars, and distinctive containers.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹1.20</span><span class="price-unit">/ pc</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-02" 
+                            data-title="Stickers by Shape" 
+                            data-price="1.20" 
+                            data-img="../assets/images/products/stickers-by-shape.jpg" 
+                            data-moq="25 pcs" 
+                            data-unit="pc" 
+                            data-category="stickers"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 3: Custom Gold Metallic Stickers -->
+              <article class="all-cat-card" 
+                       data-category="bestseller stickers"
+                       data-type="stickers"
+                       data-class="bestseller luxury"
+                       data-media="vinyl"
+                       data-gsm="light"
+                       data-side="single"
+                       data-finishing="foil die-cut"
+                       data-price-val="2.40"
+                       data-title="Custom Gold Metallic Stickers"
+                       data-img="../assets/images/products/custom-stickers.jpg"
+                       data-badge="Gold Metallic"
+                       data-desc="Reflective mirror gold & silver metallic die-cut stickers. Ideal for luxury boutique seals, gift boxes, and memorable branding."
+                       data-moq="50 pcs"
+                       data-material="Gold / Silver Mirror Metallic Foil Film"
+                       data-finishing-text="Waterproof Gloss Adhesive, Easy-Peel"
+                       data-turnaround="2 - 3 Days">
+                <div class="card-media">
+                  <img src="../assets/images/products/custom-stickers.jpg" alt="Custom Gold Metallic Stickers" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Custom Gold Metallic Stickers</h3>
+                    <span class="badge-stock">Bestseller</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">Round</span>
+                    <span class="spec-pill">Heart</span>
+                    <span class="spec-pill">Square</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Reflective mirror gold & silver metallic die-cut stickers. Ideal for luxury boutique seals, gift boxes, and memorable branding.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹2.40</span><span class="price-unit">/ pc</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-03" 
+                            data-title="Custom Gold Metallic Stickers" 
+                            data-price="2.40" 
+                            data-img="../assets/images/products/custom-stickers.jpg" 
+                            data-moq="50 pcs" 
+                            data-unit="pc" 
+                            data-category="stickers"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 4: Foil Business Cards -->
+              <article class="all-cat-card" 
+                       data-category="bestseller business"
+                       data-type="business"
+                       data-class="executive bestseller luxury"
+                       data-media="cotton-velvet"
+                       data-gsm="heavy"
+                       data-side="double"
+                       data-finishing="foil lamination"
+                       data-price-val="499"
+                       data-title="Luxury Foil Business Cards"
+                       data-img="../assets/images/products/foil-business-cards.jpg"
+                       data-badge="Luxury Suite"
+                       data-desc="Premium heavyweight business cards finished with hot gold foil stamping, gilded painted edges, and velvety soft-touch lamination."
+                       data-moq="100 pcs"
+                       data-material="400 GSM Cotton Velvet / Imported Board"
+                       data-finishing-text="Hot Gold Foil Stamping, Gilded Edges"
+                       data-turnaround="3 - 4 Days">
+                <div class="card-media">
+                  <img src="../assets/images/products/foil-business-cards.jpg" alt="Foil Business Cards" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Luxury Foil Business Cards</h3>
+                    <span class="badge-stock">Executive Grade</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">100 pcs</span>
+                    <span class="spec-pill">250 pcs</span>
+                    <span class="spec-pill">500 pcs</span>
+                    <span class="spec-pill">1000 pcs</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Premium heavyweight business cards finished with hot gold foil stamping, gilded painted edges, and velvety soft-touch lamination.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹499</span><span class="price-unit">/ set</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-04" 
+                            data-title="Luxury Foil Business Cards" 
+                            data-price="499" 
+                            data-img="../assets/images/products/foil-business-cards.jpg" 
+                            data-moq="100 pcs" 
+                            data-unit="set" 
+                            data-category="business"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 5: LED Clip On Sign Board -->
+              <article class="all-cat-card" 
+                       data-category="signage"
+                       data-type="signage"
+                       data-class="executive"
+                       data-media="aluminium-acrylic"
+                       data-gsm="rigid"
+                       data-side="single"
+                       data-finishing="die-cut"
+                       data-price-val="11000"
+                       data-title="LED Clip On Sign Board"
+                       data-img="../assets/images/products/led-sign-board.jpg"
+                       data-badge="Ultra-Slim Display"
+                       data-desc="Ultra-slim aluminium profile illuminated LED clip-on sign board for food menus, retail promotional boards, and showroom displays."
+                       data-moq="1 Unit"
+                       data-material="Anodized Aluminium Frame & Acrylic Front"
+                       data-finishing-text="Backlit LED Matrix, Easy Front-Snap Swap"
+                       data-turnaround="4 - 5 Days">
+                <div class="card-media">
+                  <img src="../assets/images/products/led-sign-board.jpg" alt="LED Clip On Sign Board" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">LED Clip On Sign Board</h3>
+                    <span class="badge-stock">Display Ready</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">A1 Size</span>
+                    <span class="spec-pill">A2 Size</span>
+                    <span class="spec-pill">A3 Size</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Ultra-slim aluminium profile illuminated LED clip-on sign board for food menus, retail promotional boards, and showroom displays.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹11,000</span><span class="price-unit">/ Unit</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-05" 
+                            data-title="LED Clip On Sign Board" 
+                            data-price="11000" 
+                            data-img="../assets/images/products/led-sign-board.jpg" 
+                            data-moq="1 Unit" 
+                            data-unit="unit" 
+                            data-category="signage"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 6: Brochures & Flyers -->
+              <article class="all-cat-card" 
+                       data-category="business"
+                       data-type="business"
+                       data-class="fast"
+                       data-media="art-paper"
+                       data-gsm="medium"
+                       data-side="double"
+                       data-finishing="lamination"
+                       data-price-val="2.80"
+                       data-title="Brochures & Marketing Flyers"
+                       data-img="../assets/images/products/brochures-flyers.jpg"
+                       data-badge="High-Volume Print"
+                       data-desc="Multi-panel tri-fold, bi-fold, and gatefold marketing brochures with rich pigment accuracy and crisp, high-definition reproduction."
+                       data-moq="250 pcs"
+                       data-material="130 GSM - 300 GSM Imported Art Paper"
+                       data-finishing-text="Gloss Coating, Thermal Matte Finish"
+                       data-turnaround="2 - 3 Days">
+                <div class="card-media">
+                  <img src="../assets/images/products/brochures-flyers.jpg" alt="Brochures & Marketing Flyers" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Brochures & Marketing Flyers</h3>
+                    <span class="badge-stock">In Stock : High Vol</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">Tri-Fold</span>
+                    <span class="spec-pill">Bi-Fold</span>
+                    <span class="spec-pill">A4 Flyer</span>
+                    <span class="spec-pill">Catalog</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Multi-panel tri-fold, bi-fold, and gatefold marketing brochures with rich pigment accuracy and crisp, high-definition reproduction.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹2.80</span><span class="price-unit">/ pc</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-06" 
+                            data-title="Brochures & Marketing Flyers" 
+                            data-price="2.80" 
+                            data-img="../assets/images/products/brochures-flyers.jpg" 
+                            data-moq="250 pcs" 
+                            data-unit="pc" 
+                            data-category="business"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 7: Expo Hanging & Roll-Up Banner -->
+              <article class="all-cat-card" 
+                       data-category="bestseller signage"
+                       data-type="signage"
+                       data-class="fast bestseller"
+                       data-media="vinyl"
+                       data-gsm="medium"
+                       data-side="single"
+                       data-finishing="die-cut"
+                       data-price-val="1450"
+                       data-title="Expo Roll-Up Banner Standee"
+                       data-img="../assets/images/products/expo-banner.jpg"
+                       data-badge="Display Standee"
+                       data-desc="Heavy-duty retractable roll-up exhibition standee banner with aluminium foot stand, anti-curl canvas, and protective carry case."
+                       data-moq="1 Unit"
+                       data-material="Anti-Curl Satin Canvas / Non-Tear PET"
+                       data-finishing-text="Eco-Solvent High-Res UV Print"
+                       data-turnaround="1 - 2 Days">
+                <div class="card-media">
+                  <img src="../assets/images/products/expo-banner.jpg" alt="Expo Roll-Up Banner Standee" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Expo Roll-Up Banner Standee</h3>
+                    <span class="badge-stock">Same Day Dispatch</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">6 x 3 ft</span>
+                    <span class="spec-pill">6 x 2.5 ft</span>
+                    <span class="spec-pill">Heavy Base</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Heavy-duty retractable roll-up exhibition standee banner with aluminium foot stand, anti-curl canvas, and protective carry case.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹1,450</span><span class="price-unit">/ unit</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-07" 
+                            data-title="Expo Roll-Up Banner Standee" 
+                            data-price="1450" 
+                            data-img="../assets/images/products/expo-banner.jpg" 
+                            data-moq="1 Unit" 
+                            data-unit="unit" 
+                            data-category="signage"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 8: Embossed Stone Print Plaque -->
+              <article class="all-cat-card" 
+                       data-category="business"
+                       data-type="business"
+                       data-class="luxury"
+                       data-media="stone-slate"
+                       data-gsm="rigid"
+                       data-side="single"
+                       data-finishing="embossed"
+                       data-price-val="850"
+                       data-title="Embossed Stone Print Plaque"
+                       data-img="../assets/images/products/embossed-stone-print.jpg"
+                       data-badge="Speciality Gift"
+                       data-desc="Natural rock slate stone plaque with UV high-density flatbed print, rustic chiseled borders, and presentation display easel feet."
+                       data-moq="1 Piece"
+                       data-material="Natural Rock Slate Stone Plaque"
+                       data-finishing-text="UV Embossed Relief Print, Sepia / Colour"
+                       data-turnaround="3 - 4 Days">
+                <div class="card-media">
+                  <img src="../assets/images/products/embossed-stone-print.jpg" alt="Embossed Stone Print Plaque" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Embossed Stone Print Plaque</h3>
+                    <span class="badge-stock">Custom Gift</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">Square 8x8</span>
+                    <span class="spec-pill">Rect 8x12</span>
+                    <span class="spec-pill">Heart Shape</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Natural rock slate stone plaque with UV high-density flatbed print, rustic chiseled borders, and presentation display easel feet.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹850</span><span class="price-unit">/ piece</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-08" 
+                            data-title="Embossed Stone Print Plaque" 
+                            data-price="850" 
+                            data-img="../assets/images/products/embossed-stone-print.jpg" 
+                            data-moq="1 Piece" 
+                            data-unit="piece" 
+                            data-category="business"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 9: Custom Kraft Paper Bags -->
+              <article class="all-cat-card" 
+                       data-category="packaging"
+                       data-type="bags"
+                       data-class="eco"
+                       data-media="kraft"
+                       data-gsm="medium"
+                       data-side="double"
+                       data-finishing="die-cut"
+                       data-price-val="6.50"
+                       data-title="Custom Kraft Paper Bags"
+                       data-img="../assets/images/products/paper-bags.jpg"
+                       data-badge="Eco Packaging"
+                       data-desc="Eco-friendly recyclable brown & bleached white kraft retail shopping bags with reinforced twisted paper or satin ribbon handles."
+                       data-moq="500 pcs"
+                       data-material="120 - 250 GSM Virgin Kraft Paper"
+                       data-finishing-text="Pantone Spot Printing, Die-Cut Eyelets"
+                       data-turnaround="4 - 6 Days">
+                <div class="card-media">
+                  <img src="../assets/images/products/paper-bags.jpg" alt="Custom Kraft Paper Bags" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Custom Kraft Paper Bags</h3>
+                    <span class="badge-stock">Eco Certified</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">Small</span>
+                    <span class="spec-pill">Medium</span>
+                    <span class="spec-pill">Large</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Eco-friendly recyclable brown & bleached white kraft retail shopping bags with reinforced twisted paper or satin ribbon handles.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹6.50</span><span class="price-unit">/ pc</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-09" 
+                            data-title="Custom Kraft Paper Bags" 
+                            data-price="6.50" 
+                            data-img="../assets/images/products/paper-bags.jpg" 
+                            data-moq="500 pcs" 
+                            data-unit="pc" 
+                            data-category="packaging"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 10: Luxury Rigid Boxes -->
+              <article class="all-cat-card" 
+                       data-category="packaging"
+                       data-type="packaging"
+                       data-class="luxury executive"
+                       data-media="grey-board"
+                       data-gsm="rigid"
+                       data-side="single"
+                       data-finishing="foil lamination"
+                       data-price-val="45.00"
+                       data-title="Luxury Rigid Setup Boxes"
+                       data-img="../assets/images/services/packaging.png"
+                       data-badge="Rigid Hardboard"
+                       data-desc="Handcrafted rigid setup gift boxes with magnetic closure flaps, bespoke EVA foam inserts, and embossed metallic logos."
+                       data-moq="200 pcs"
+                       data-material="1.5mm - 3mm Kappa / Grey Board"
+                       data-finishing-text="Magnetic Catch, Soft-Touch Foil"
+                       data-turnaround="7 - 10 Days">
+                <div class="card-media">
+                  <img src="../assets/images/services/packaging.png" alt="Luxury Rigid Setup Boxes" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Luxury Rigid Setup Boxes</h3>
+                    <span class="badge-stock">Premium Grade</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">Magnetic</span>
+                    <span class="spec-pill">Drawer Box</span>
+                    <span class="spec-pill">Shoulder Box</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Handcrafted rigid setup gift boxes with magnetic closure flaps, bespoke EVA foam inserts, and embossed metallic logos.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹45.00</span><span class="price-unit">/ pc</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-10" 
+                            data-title="Luxury Rigid Setup Boxes" 
+                            data-price="45.00" 
+                            data-img="../assets/images/services/packaging.png" 
+                            data-moq="200 pcs" 
+                            data-unit="pc" 
+                            data-category="packaging"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 11: Jar & Bottle Roll Labels -->
+              <article class="all-cat-card" 
+                       data-category="stickers"
+                       data-type="stickers"
+                       data-class="fast"
+                       data-media="vinyl"
+                       data-gsm="light"
+                       data-side="single"
+                       data-finishing="foil die-cut"
+                       data-price-val="0.65"
+                       data-title="Waterproof Roll Labels"
+                       data-img="../assets/images/agency_desk.png"
+                       data-badge="Roll Decals"
+                       data-desc="Continuously wound roll labels calibrated for automated packaging applicators, waterproof jars, honey pots, and pharmaceuticals."
+                       data-moq="1000 pcs"
+                       data-material="Synthetic BOPP, Thermal Paper, Silver Film"
+                       data-finishing-text="Gloss Varnish, Cold Foil, UV Ink"
+                       data-turnaround="3 - 4 Days">
+                <div class="card-media">
+                  <img src="../assets/images/agency_desk.png" alt="Waterproof Roll Labels" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Waterproof Roll Labels</h3>
+                    <span class="badge-stock">Automated Feed</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">Roll Core 3"</span>
+                    <span class="spec-pill">Waterproof</span>
+                    <span class="spec-pill">Freezer Grade</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Continuously wound roll labels calibrated for automated packaging applicators, waterproof jars, honey pots, and pharmaceuticals.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹0.65</span><span class="price-unit">/ label</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-11" 
+                            data-title="Waterproof Roll Labels" 
+                            data-price="0.65" 
+                            data-img="../assets/images/agency_desk.png" 
+                            data-moq="1000 pcs" 
+                            data-unit="label" 
+                            data-category="stickers"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 12: Editorial Books & Planners -->
+              <article class="all-cat-card" 
+                       data-category="business"
+                       data-type="publishing"
+                       data-class="executive luxury"
+                       data-media="art-paper"
+                       data-gsm="medium"
+                       data-side="double"
+                       data-finishing="foil embossed"
+                       data-price-val="185"
+                       data-title="Hardcover Books & Diaries"
+                       data-img="../assets/images/agency_main.png"
+                       data-badge="Publishing"
+                       data-desc="Hardcover coffee table editions, executive year planners, corporate diaries, and section-sewn perfect bound publication books."
+                       data-moq="100 pcs"
+                       data-material="Natural Shade Woodfree Paper, Hardcover"
+                       data-finishing-text="Foil Stamped Leatherette, Ribbon Bookmark"
+                       data-turnaround="5 - 7 Days">
+                <div class="card-media">
+                  <img src="../assets/images/agency_main.png" alt="Hardcover Books & Diaries" loading="lazy">
+                  <button type="button" class="card-wishlist-btn" data-bs-toggle="modal" data-bs-target="#productDetailModal" title="Quick View Specs"><i class="bi bi-eye"></i></button>
+                </div>
+                <div class="card-details">
+                  <div class="card-header-row">
+                    <h3 class="card-title">Hardcover Books & Diaries</h3>
+                    <span class="badge-stock">Custom Bind</span>
+                  </div>
+                  <div class="spec-pills-wrap">
+                    <span class="spec-pill active">A5 Diary</span>
+                    <span class="spec-pill">Hardbound</span>
+                    <span class="spec-pill">Gold Stamped</span>
+                    <button type="button" class="btn-card-customize ms-auto" data-action="open-customizer" title="Customize features & specs"><i class="bi bi-sliders"></i> Customize</button>
+                  </div>
+                  <p class="card-desc">Hardcover coffee table editions, executive year planners, corporate diaries, and section-sewn perfect bound publication books.</p>
+                  <div class="card-footer-row">
+                    <div class="card-price">
+                      <span class="price-val">₹185</span><span class="price-unit">/ copy</span>
+                    </div>
+                    <button class="btn-add-to-cart" type="button" 
+                            data-id="PROD-12" 
+                            data-title="Hardcover Books & Diaries" 
+                            data-price="185" 
+                            data-img="../assets/images/agency_main.png" 
+                            data-moq="100 pcs" 
+                            data-unit="copy" 
+                            data-category="business"
+                            title="Add to Order Cart">
+                      <i class="bi bi-bag-plus-fill"></i> <span class="btn-text-label">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product Detail Quick-View Modal -->
+  <div class="modal fade product-modal" id="productDetailModal" tabindex="-1" aria-labelledby="modalProductTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="product-modal-spec-badge" id="modalProductBadge">Featured Product</span>
+            <h2 class="modal-title h5 mb-0" id="modalProductTitle">Product Title</h2>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-5">
+              <img src="" alt="" class="product-modal-img" id="modalProductImg">
+            </div>
+            <div class="col-md-7">
+              <p class="text-muted mb-3" id="modalProductDesc">Product description will appear here.</p>
+              
+              <ul class="product-modal-list">
+                <li>
+                  <span>Minimum Order Quantity</span>
+                  <span id="modalProductMoq">500 pcs</span>
+                </li>
+                <li>
+                  <span>Standard Materials</span>
+                  <span id="modalProductMaterial">Art Board / Kraft / Vinyl</span>
+                </li>
+                <li>
+                  <span>Available Finishes</span>
+                  <span id="modalProductFinishing">Spot UV, Foil, Matte</span>
+                </li>
+                <li>
+                  <span>Factory Turnaround</span>
+                  <span id="modalProductTurnaround">3 - 5 Days</span>
+                </li>
+              </ul>
+
+              <div class="d-flex gap-2 mt-4">
+                <a href="quotation.html" id="modalProductQuoteBtn" class="btn-cta-primary w-100 text-center text-decoration-none py-2 px-3 rounded-pill">
+                  Get Free Quotation <i class="bi bi-arrow-up-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating CTA Card Banner -->
+  <section class="site-cta-section">
+    <div class="site-container">
+      <div class="site-cta-card">
+        <h2 class="site-cta-title">Need a Custom Production Estimate?</h2>
+        <p class="site-cta-subtitle">From luxury packaging boxes to high-precision roll labels — manufactured directly in Sivakasi.</p>
+        <div class="site-cta-actions">
+          <a class="btn-cta-primary" href="quotation.html">
+            Request Free Sample Kit <i class="bi bi-box-seam-fill"></i>
+          </a>
+          <a class="btn-cta-phone" href="tel:+918438283441">
+            <i class="bi bi-telephone-fill"></i> +91 84382 83441
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Site Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Slogan -->
+        <div class="footer-col footer-col-brand">
+          <a class="brand footer-brand" href="../index.html">
+            <span class="brand-mark">
+              <img src="../assets/images/logo/colour-graphicz.png" alt="Sri Mahavishnu Colour Graphicz logo">
+            </span>
+            <span class="brand-copy">
+              <span>Sri Mahavishnu</span>
+              <strong>Colour Graphicz</strong>
+            </span>
+          </a>
+          <p class="footer-desc">
+            Designs That Speak; Prints That Impress. 6-Color offset printing & custom packaging manufacturer in Sivakasi.
+          </p>
+          <div class="footer-clock-box">
+            <i class="bi bi-clock-history"></i>
+            <span id="footerClockTime">07:42:51 PM</span> (IST)
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="all-categories.html">All Categories</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="quotation.html">Get Quote</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Main Office Contact Info -->
+        <div class="footer-col footer-col-contact">
+          <h4 class="footer-heading">Sivakasi Main Office</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>1073/3 P.K.N. Road, near Nandhini Bakery, Sivakasi - 626189</span>
+            </li>
+            <li>
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+918438283441">+91 84382 83441</a>
+            </li>
+            <li>
+              <i class="bi bi-envelope-fill"></i>
+              <a href="mailto:colourgraphiczdesigner@gmail.com">colourgraphiczdesigner@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 Sri Mahavishnu Colour Graphicz. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Filter Bottom Sheet -->
+  <div class="mobile-filter-overlay" id="mobileFilterOverlay" role="dialog" aria-modal="true" aria-label="Product Filters">
+    <div class="mobile-filter-sheet" id="mobileFilterSheet">
+      <!-- Drag Handle -->
+      <div class="mobile-filter-sheet-handle"></div>
+
+      <!-- Header -->
+      <div class="mobile-filter-sheet-header">
+        <h3 class="mobile-filter-sheet-title">
+          <i class="bi bi-sliders" style="color:#A0ED32;"></i> Filter Products
+        </h3>
+        <button type="button" class="mobile-filter-sheet-close" id="mobileFilterCloseBtn" aria-label="Close filters">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <!-- Filter Options Body -->
+      <div class="mobile-filter-sheet-body">
+        <!-- Search -->
+        <div class="mfs-filter-group">
+          <label for="mfsSearchInput"><i class="bi bi-search"></i> Search Product</label>
+          <input type="text" id="mfsSearchInput" class="filter-search-input" placeholder="Type product name, specs...">
+        </div>
+
+        <!-- Product Type -->
+        <div class="mfs-filter-group">
+          <label for="mfsProductType"><i class="bi bi-layers-half"></i> Product Type</label>
+          <select id="mfsProductType" class="filter-select">
+            <option value="all">All Product Types</option>
+            <option value="packaging">Packaging Boxes & Cartons</option>
+            <option value="stickers">Stickers & Decal Labels</option>
+            <option value="business">Business Cards & Stationery</option>
+            <option value="signage">Signage & Displays</option>
+            <option value="publishing">Books & Editorial</option>
+            <option value="bags">Retail Paper Bags</option>
+          </select>
+        </div>
+
+        <!-- Classification -->
+        <div class="mfs-filter-group">
+          <label for="mfsClassification"><i class="bi bi-star-half"></i> Classification</label>
+          <select id="mfsClassification" class="filter-select">
+            <option value="all">All Classifications</option>
+            <option value="bestseller">★ Bestseller Items</option>
+            <option value="executive">👔 Executive Grade</option>
+            <option value="eco">🌱 Eco Certified</option>
+            <option value="luxury">✨ Luxury Suite</option>
+            <option value="fast">⚡ Fast Turnaround</option>
+          </select>
+        </div>
+
+        <!-- Substrate / Media -->
+        <div class="mfs-filter-group">
+          <label for="mfsMedia"><i class="bi bi-card-image"></i> Substrate / Media</label>
+          <select id="mfsMedia" class="filter-select">
+            <option value="all">All Substrates</option>
+            <option value="cyber-x">Cyber X / Duplex Board</option>
+            <option value="vinyl">Waterproof Vinyl Film</option>
+            <option value="cotton-velvet">Cotton Velvet Board</option>
+            <option value="aluminium-acrylic">Aluminium Frame & Acrylic</option>
+            <option value="art-paper">Imported Art Paper</option>
+            <option value="stone-slate">Rock Slate Stone</option>
+            <option value="kraft">Virgin Kraft Paper</option>
+            <option value="grey-board">Kappa / Grey Board</option>
+          </select>
+        </div>
+
+        <!-- GSM -->
+        <div class="mfs-filter-group">
+          <label for="mfsGsm"><i class="bi bi-speedometer"></i> GSM / Caliper</label>
+          <select id="mfsGsm" class="filter-select">
+            <option value="all">All Weights</option>
+            <option value="light">Light (&lt; 150 GSM / Vinyl)</option>
+            <option value="medium">Medium (150 - 300 GSM)</option>
+            <option value="heavy">Heavy (300 - 450 GSM)</option>
+            <option value="rigid">Rigid Board &amp; Acrylic</option>
+          </select>
+        </div>
+
+        <!-- Finishing -->
+        <div class="mfs-filter-group">
+          <label for="mfsFinishing"><i class="bi bi-magic"></i> Finishing Effect</label>
+          <select id="mfsFinishing" class="filter-select">
+            <option value="all">All Finishing Types</option>
+            <option value="foil">Hot Gold Foil Stamping</option>
+            <option value="spot-uv">Spot UV Gloss</option>
+            <option value="lamination">Matte / Soft-Touch Lamination</option>
+            <option value="embossed">Embossed 3D Relief</option>
+            <option value="die-cut">Precision Laser Die-Cut</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Footer Actions -->
+      <div class="mobile-filter-sheet-footer">
+        <button type="button" class="mfs-btn-reset" id="mfsResetBtn">
+          <i class="bi bi-arrow-counterclockwise"></i> Reset
+        </button>
+        <button type="button" class="mfs-btn-apply" id="mfsApplyBtn">
+          <i class="bi bi-check2-circle"></i> Apply Filters
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Modular Scripts -->
+  <script src="../js/theme.js"></script>
+  <script src="../js/clock.js"></script>
+  <script src="../js/canvas.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/all-categories.js"></script>
+</body>
+</html>
